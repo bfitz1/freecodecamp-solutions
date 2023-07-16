@@ -28,6 +28,10 @@ h1, h2, p {
     padding: 20px;
 }
 
+hr {
+    height: 3px;
+}
+
 .flavor, .dessert {
     text-align: left;
     width: 75%;
