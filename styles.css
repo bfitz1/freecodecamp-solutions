@@ -7,5 +7,6 @@ h1, h2, p {
 }
 
 div {
+    background-color: burlywood;
     width: 300px;
 }
