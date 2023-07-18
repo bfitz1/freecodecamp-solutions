@@ -53,3 +53,8 @@ input, textarea {
     width: unset;
     margin: 0 0.5em 0 0;
 }
+
+input[type="submit"] {
+    display: block;
+    width: 60%;
+}
