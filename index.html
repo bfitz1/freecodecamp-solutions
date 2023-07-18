@@ -8,12 +8,12 @@
     </head>
     <body>
         <h1 id="title">Survey Form</h1>
-        <p id="descripition">
+        <p id="description">
             Thank you for using our product. Your feedback is appreciated,
             and definitely won't be forwarded to /dev/null.
         </p>
         <form id="survey-form">
-            <fieldset>
+            <fieldset class="block">
                 <label id="name-label" for="name">
                     Name
                     <input id="name" name="name" type="text" placeholder="Enter your name" required>
@@ -27,7 +27,7 @@
                     <input id="number" name="number" type="number" min="0" max="10" placeholder="Enter a number">
                 </label>
             </fieldset>
-            <fieldset>
+            <fieldset class="block">
                 <label id="dropdown-label" for="dropdown">
                     How would you rate the product?
                     <select id="dropdown">
@@ -40,7 +40,7 @@
                     </select>
                 </label>
             </fieldset>
-            <fieldset>
+            <fieldset class="per-line">
                 <p>What kind of user are you?</p>
                 <label id="power-user-label" for="power-user">
                     <input id="power-user" name="user-type" type="radio" value="power-user">
@@ -55,7 +55,7 @@
                     Forced against my will
                 </label>
             </fieldset>
-            <fieldset>
+            <fieldset class="per-line">
                 <p>How would you change the product?</p>
                 <label id="cheaper-label" for="cheaper">
                     <input id="cheaper" name="cheaper" type="checkbox" value="cheaper">
