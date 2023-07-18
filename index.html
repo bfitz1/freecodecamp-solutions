@@ -13,42 +13,48 @@
             and definitely won't be forwarded to /dev/null.
         </p>
         <form id="survey-form">
-            <label id="name-label" for="name">
-                Name
-                <input id="name" name="name" type="text" placeholder="Enter your name" required>
-            </label>
-            <label id="email-label" for="email">
-                Email
-                <input id="email" name="email" type="email" placeholder="Enter your email" required>
-            </label>
-            <label id="number-label" for="number">
-                Years Used
-                <input id="number" name="number" type="number" min="0" max="10" placeholder="Enter a number">
-            </label>
-            <label id="dropdown-label" for="dropdown">
-                How would you rate the product?
-                <select id="dropdown">
-                    <option>Select a rating</option>
-                    <option>Awesome!</option>
-                    <option>Pretty good.</option>
-                    <option>Mid...</option>
-                    <option>Sucky.</option>
-                    <option>Terrible!</option>
-                </select>
-            </label>
-            <p>What kind of user are you?</p>
-            <label id="power-user-label" for="power-user">
-                <input id="power-user" name="user-type" type="radio" value="power-user">
-                Power user
-            </label>
-            <label id="average-user-label" for="average-user">
-                <input id="average-user" name="user-type" type="radio" value="average-user">
-                Average joe
-            </label>
-            <label id="forced-user-label" for="forced-user">
-                <input id="forced-user" name="user-type" type="radio" value="forced-user">
-                Forced against my will
-            </label>
+            <fieldset>
+                <label id="name-label" for="name">
+                    Name
+                    <input id="name" name="name" type="text" placeholder="Enter your name" required>
+                </label>
+                <label id="email-label" for="email">
+                    Email
+                    <input id="email" name="email" type="email" placeholder="Enter your email" required>
+                </label>
+                <label id="number-label" for="number">
+                    Years Used
+                    <input id="number" name="number" type="number" min="0" max="10" placeholder="Enter a number">
+                </label>
+            </fieldset>
+            <fieldset>
+                <label id="dropdown-label" for="dropdown">
+                    How would you rate the product?
+                    <select id="dropdown">
+                        <option>Select a rating</option>
+                        <option>Awesome!</option>
+                        <option>Pretty good.</option>
+                        <option>Mid...</option>
+                        <option>Sucky.</option>
+                        <option>Terrible!</option>
+                    </select>
+                </label>
+            </fieldset>
+            <fieldset>
+                <p>What kind of user are you?</p>
+                <label id="power-user-label" for="power-user">
+                    <input id="power-user" name="user-type" type="radio" value="power-user">
+                    Power user
+                </label>
+                <label id="average-user-label" for="average-user">
+                    <input id="average-user" name="user-type" type="radio" value="average-user">
+                    Average joe
+                </label>
+                <label id="forced-user-label" for="forced-user">
+                    <input id="forced-user" name="user-type" type="radio" value="forced-user">
+                    Forced against my will
+                </label>
+            </fieldset>
         </form>
     </body>
 </html>
