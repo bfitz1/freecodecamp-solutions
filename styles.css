@@ -2,6 +2,7 @@
     width: 500px;
     height: 600px;
     background-color: #4d0f00;
+    overflow: hidden;
 }
 
 .frame {
@@ -16,5 +17,4 @@
     height: 125px;
     background-color: #efb762;
     margin: 20px auto;
-    padding: 1px;
 }
