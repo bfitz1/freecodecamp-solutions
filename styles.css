@@ -97,6 +97,10 @@ input {
     font-size: 16px;
 }
 
+.info input, .info label {
+    display: inline-block;
+}
+
 .info input {
     width: 50%;
     text-align: left;
@@ -105,6 +109,7 @@ input {
 .info label {
     width: 10%;
     min-width: 55px;
+    text-align: right;
 }
 
 p:before {
