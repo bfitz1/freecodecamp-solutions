@@ -112,6 +112,14 @@ input {
     text-align: right;
 }
 
+.question-block {
+    text-align: left;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 5px;
+}
+
 p:before {
     content: "Question #";
 }
