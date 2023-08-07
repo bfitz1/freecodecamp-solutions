@@ -11,6 +11,10 @@ header {
     text-align: center;
 }
 
+header p {
+    font-style: italic;
+}
+
 figure {
     background-color: rgb(184, 228, 255);
     text-align: center;
@@ -18,10 +22,16 @@ figure {
     border-radius: 5px;
 }
 
+figcaption {
+    margin-top: 1em;
+}
+
 #img-div img {
+    display: block;
     object-fit: cover;
     border-radius: 5px;
     max-width: 100%;
+    height: auto;
 }
 
 #tribute-info {
