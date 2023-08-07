@@ -1,3 +1,46 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5em;
+}
+
+header {
+    text-align: center;
+}
+
+figure {
+    background-color: rgb(184, 228, 255);
+    text-align: center;
+    padding: 1em;
+    border-radius: 5px;
+}
+
 #img-div img {
-    max-width: 90vw;
+    object-fit: cover;
+    border-radius: 5px;
+    max-width: 100%;
+}
+
+#tribute-info {
+    max-width: 600px;
+    margin: auto;
+}
+
+#tribute-info h2 {
+    margin: 2em auto;
+    text-align: center;
+}
+
+#tribute-info ul li {
+    margin-bottom: 1em;
+}
+
+footer {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 3em;
 }
