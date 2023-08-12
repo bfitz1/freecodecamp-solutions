@@ -76,6 +76,12 @@ table {
     margin-top: 3rem;
 }
 
+tr.data td {
+    vertical-align: top;
+    text-align: right;
+    padding: 0.3rem 0.25rem 0;
+}
+
 table caption {
     color: #356eaf;
     font-size: 1.3em;
