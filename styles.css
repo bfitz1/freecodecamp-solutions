@@ -98,3 +98,8 @@ tbody td {
 tbody th {
     width: calc(100% - 12rem);
 }
+
+tr[class="total"] {
+    font-weight: bold;
+    border-bottom: 4px double #0a0a23;
+}
