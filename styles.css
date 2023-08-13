@@ -52,4 +52,5 @@ body {
     position: absolute;
     top: 50px;
     left: 125px;
+    z-index: 1;
 }
