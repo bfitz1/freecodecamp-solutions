@@ -237,3 +237,9 @@ body {
     background-color: #8b4513;
     border-radius: 20px 50%;
 }
+
+.right {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+}
