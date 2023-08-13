@@ -48,3 +48,6 @@ html {
     position: absolute;
     top: 23px;
 }
+
+@media (max-width: 768px) {
+}
