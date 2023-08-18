@@ -230,7 +230,23 @@
                 </article>
             </section>
             <section id="Rule_10" class="main-section">
-                <header>Rule 10</header>
+                <div>
+                    <header>Rule 10</header>:
+                    <p>All code must be compiled, from the first day of development, with all compiler warnings enabled at the most
+                        pedantic setting available. All code must compile without warnings. All code must also be checked daily with at least one,
+                        but preferably more than one, strong static source code analyzer and should pass all analyses with zero warnings.</p>
+                </div>
+                <article>
+                    <p>Rationale : There are several extremely effective static source code analyzers on the market today, and quite a few
+                        freeware tools as well. There simply is no excuse for any software development effort not to use this readily available
+                        technology. It should be considered routine practice, even for noncritical code development.</p>
+                    <p>The rule of zero warnings applies even when the compiler or the static analyzer gives an erroneous warning: If the
+                        compiler or analyzer gets confused, the code causing the confusion should be rewritten. Many developers have been
+                        caught in the assumption that a warning was surely invalid, only to realize much later that the message was in fact valid
+                        for less obvious reasons. Static analyzers have a somewhat bad reputation due to early versions that produced mostly
+                        invalid messages, but this is no longer the case. The best static analyzers today are fast, and they produce accurate
+                        messages. Their use should not be negotiable on any serious software project.</p>
+                </article>
             </section>
             <section id="#Following_the_rules" class="main-section">
                 <header>Following the rules</header>
