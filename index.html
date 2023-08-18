@@ -32,6 +32,35 @@
             </section>
             <section id="Introduction" class="main-section">
                 <header>Introduction</header>
+                <article>
+                    <p>Adhering to a set of 10 verifiable coding rules can
+                       make the analysis of critical software domponents more
+                       reliable.</p>
+                    <p>Most serious software development projects use coding guidelines. These guidelines are meant to define the ground
+                       rules for the software to be written: how it should be structured and which language features should and should not be
+                       used. Curiously, there is little consensus on what a good coding standard is.</p>
+                    <p>Among the many coding guidelines that have been written, there are remarkably few patterns to discern, except that each
+                       new document tends to be longer than the one before it. The result is that most existing guidelines contain well over 100
+                       rules, sometimes with questionable justification. Some rules, especially those that try to stipulate the use of white space
+                       in programs, might have been introduced by personal preference; others are meant to prevent very specific and unlikely
+                       types of errors from earlier coding efforts within the same organization.</p>
+                    <p>Not surprisingly, the existing coding guidelines tend to have little effect on what developers actually do when they write
+                       code. The most dooming aspect of many of the guidelines is that they rarely allow for comprehensive tool-based
+                       compliance checks. Tool-based checks are important because manually reviewing the hundreds of thousands of lines of
+                       code that are written for larger applications is often infeasible.</p>
+                    <p>Existing coding guidelines therefore offer limited benefit, even for critical applications. A verifiable set of well-chosen
+                       coding rules could, however, assist in analyzing critical software components for properties that go well beyond
+                       compliance with the set of rules itself. To be effective, though, the set of rules must be small, and it must be clear enough
+                       that users can easily understand and remember it. In addition, the rules must be specific enough that users can check
+                       them thoroughly and mechanically.</p>
+                    <p>To put an upper bound on the number of rules, I will argue that restricting the set to no more than 10 rules will provide an
+                       effective guideline. Although such a small set of rules cannot be all-encompassing, following it can achieve measurable
+                       effects on software reliability and verifiability.</p>
+                    <p>To support strong checking, the rules I will propose are somewhat strict—some might even say draconian. The tradeoff,
+                       though, should be clear. When it really counts, especially in the development of safety-critical code, working within stricter
+                       limits can be worth the extra effort. In return, it should be possible to demonstrate more convincingly that critical software
+                       will work as intended.</p>
+                </article>
             </section>
             <section id="Safety-critical_coding_rules" class="main-section">
                 <header>Safety-critical coding rules</header>
