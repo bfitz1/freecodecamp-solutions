@@ -215,7 +215,19 @@
                 </article>
             </section>
             <section id="Rule_9" class="main-section">
-                <header>Rule 9</header>
+                <div>
+                    <header>Rule 9</header>:
+                    <p>The use of pointers must be restricted. Specifically, no more than one level of dereferencing should be used.
+                        Pointer dereference operations may not be hidden in macro definitions or inside typedef declarations. Function pointers
+                        are not permitted.</p>
+                </div>
+                <article>
+                    <p><span>Rationale</span>: Pointers are easily misused, even by experienced programmers. They can make it hard to follow or analyze the
+                        flow of data in a program, especially by tool-based analyzers. Similarly, function pointers should be used only if there is a
+                        very strong justification for doing so because they can seriously restrict the types of automated checks that code checkers
+                        can perform. For example, if function pointers are used, it can become impossible for a tool to prove the absence of
+                        recursion, requiring alternate guarantees to make up for this loss in checking power.</p>
+                </article>
             </section>
             <section id="Rule_10" class="main-section">
                 <header>Rule 10</header>
