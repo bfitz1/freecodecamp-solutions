@@ -76,7 +76,25 @@
                 </article>
             </section>
             <section id="Rule_1" class="main-section">
-                <header>Rule 1</header>
+                <div>
+                    <header>Rule 1</header>:
+                    <p>Restrict all code to very simple control flow constructs—do not use</p>
+                    <ul>
+                        <li><code>goto</code> statements</li>
+                        <li><code>setjmp</code> constructs</li>
+                        <li><code>longjmp</code> constructs</li>
+                        <li>direct recursion</li>
+                        <li>indirect recursion</li>
+                    </ul>
+                </div>
+                <article>
+                    <p><span>Rationale</span> : Simpler control flow translates into stronger capabilities for analysis and often results in improved code clarity.
+                        Banishing recursion is perhaps the biggest surprise here. Avoiding recursion results in having an acyclic function call
+                        graph, which code analyzers can exploit to prove limits on stack use and boundedness of executions. Note that this rule
+                        does not require that all functions have a single point of return, although this often also simplifies control flow. In some
+                        cases, though, an early return is the simpler solution.
+                    </p>
+                </article>
             </section>
             <section id="Rule_2" class="main-section">
                 <header>Rule 2</header>
