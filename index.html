@@ -164,7 +164,16 @@
                 </article>
             </section>
             <section id="Rule_6" class="main-section">
-                <header>Rule 6</header>
+                <div>
+                    <header>Rule 6</header>:
+                    <p>Declare alldata objects at the smallest possible level of scope.</p>
+                </div>
+                <article>
+                    <p><span>Rationale</span> : This rule supports a basic principle of data hiding. Clearly, if an object is not in scope, othermodules cannot
+                        reference or corrupt its value. Similarly, if a tester must diagnose an object's erroneous value, the fewer the number of
+                        statements where the value could have been assigned, the easier it is to diagnose the problem. The rule also discourages
+                        the reuse of variables for multiple, incompatible purposes, which can complicate fault diagnosis.</p>
+                </article>
             </section>
             <section id="Rule_7" class="main-section">
                 <header>Rule 7</header>
