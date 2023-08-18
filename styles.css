@@ -1,0 +1,46 @@
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+code {
+    display: inline-block;
+    padding: 0.1rem 0.3rem;
+    margin: 0.1rem;
+    font-size: 0.9rem;
+    color: rgb(158, 0, 0);
+    background-color: #f8f8f8;
+    border: 2px solid #e9dddd;
+    border-radius: 6px;
+}
+
+.header-block {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    color: #2772af;
+    margin-top: 2rem;
+    margin-bottom: -1rem;
+}
+
+.header-rule {
+    display: inline;
+    font-weight: bold;
+}
+
+.header-p {
+    display: inline;
+}
+
+.header-hidden {
+    display: none;
+}
+
+.before {
+    font-style: italic;
+}
