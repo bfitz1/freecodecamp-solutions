@@ -145,7 +145,23 @@
                 </article>
             </section>
             <section id="Rule_5" class="main-section">
-                <header>Rule 5</header>
+                <div>
+                    <header>Rule 5</header>:
+                    <p>The code's assertion density should average to minimally two assertions per function. Assertions must be used to
+                        check for anomalous conditions that should never happen in real-life executions. Assertions must be side-effect free and
+                        should be defined as Boolean tests. When an assertion fails, an explicit recovery action must be taken such as returning
+                        an error condition to the caller of the function that executes the failing assertion. Any assertion for which a static checking
+                        tool can prove that it can never fail or never hold violates this rule.
+                        </p>
+                </div>
+                <article>
+                    <p><span>Rationale</span> : Statistics for industrial coding efforts indicate that unit tests often find at least one defect per 10 to 100 lines
+                        of written code. The odds of intercepting defects increase significantly with increasing assertion density. Using assertions
+                        is often recommended as part of a strong defensive coding strategy. Developers can use assertions to verify pre- and
+                        postconditions of functions, parameter values, return values of functions, and loop invariants. Because the proposed
+                        assertions are side-effect free, they can be selectively disabled after testing in performance-critical code.
+                        </p>
+                </article>
             </section>
             <section id="Rule_6" class="main-section">
                 <header>Rule 6</header>
