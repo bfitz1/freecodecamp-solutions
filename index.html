@@ -89,17 +89,15 @@
                 </article>
             </section>
             <section id="Rule_1" class="main-section">
-                <div>
-                    <header class="header-rule">Rule 1</header>:
-                    <p class="header-p">Restrict all code to very simple control flow constructs—do not use</p>
-                    <ul>
-                        <li><code>goto</code> statements</li>
-                        <li><code>setjmp</code> constructs</li>
-                        <li><code>longjmp</code> constructs</li>
-                        <li>direct recursion</li>
-                        <li>indirect recursion</li>
-                    </ul>
-                </div>
+                <header class="header-rule">Rule 1</header>:
+                <p class="header-p">Restrict all code to very simple control flow constructs—do not use</p>
+                <ul>
+                    <li><code>goto</code> statements</li>
+                    <li><code>setjmp</code> constructs</li>
+                    <li><code>longjmp</code> constructs</li>
+                    <li>direct recursion</li>
+                    <li>indirect recursion</li>
+                </ul>
                 <article>
                     <p><span class="before">Rationale</span> : Simpler control flow translates into stronger capabilities for analysis and often results in improved code clarity.
                         Banishing recursion is perhaps the biggest surprise here. Avoiding recursion results in having an acyclic function call
@@ -110,15 +108,13 @@
                 </article>
             </section>
             <section id="Rule_2" class="main-section">
-                <div>
-                    <header class="header-rule">Rule 2</header>:
-                    <p class="header-p">Give all loops a fixed upper bound. It must be trivially possible for a checking tool to prove statically that the loop
-                       cannot exceed a preset upper bound on the number of iterations. If a tool cannot prove the loop bound statically, the rule
-                       is considered violated.
-                    </p>
-                </div>
+                <header class="header-rule">Rule 2</header>:
+                <p class="header-p">Give all loops a fixed upper bound. It must be trivially possible for a checking tool to prove statically that the loop
+                    cannot exceed a preset upper bound on the number of iterations. If a tool cannot prove the loop bound statically, the rule
+                    is considered violated.
+                </p>
                 <article>
-                    <p><span>Rationale</span> : The absence of recursion and the presence of loop bounds prevents runaway code. This rule does not, of
+                    <p><span class="before">Rationale</span> : The absence of recursion and the presence of loop bounds prevents runaway code. This rule does not, of
                         course, apply to iterations that are meant to be nonterminating—for example, in a process scheduler. In those special
                         cases, the reverse rule is applied: It should be possible for a checking tool to prove statically that the iteration cannot
                         terminate.</p>
@@ -128,12 +124,10 @@
                 </article>
             </section>
             <section id="Rule_3" class="main-section">
-                <div>
-                    <header class="header-rule">Rule 3</header>:
-                    <p class="header-p">Do not use dynamic memory allocation after initialization.</p>
-                </div>
+                <header class="header-rule">Rule 3</header>:
+                <p class="header-p">Do not use dynamic memory allocation after initialization.</p>
                 <article>
-                    <p><span>Rationale</span> : This rule appears in most coding guidelines for safety-critical software. The reason is simple: Memory
+                    <p><span class="before">Rationale</span> : This rule appears in most coding guidelines for safety-critical software. The reason is simple: Memory
                         allocators, such as malloc, and garbage collectors often have unpredictable behavior that can significantly impact
                         performance.</p>
                     <p>A notable class of coding errors also stems from the mishandling of memory allocation and free routines: forgetting to free
@@ -146,29 +140,25 @@
                 </article>
             </section>
             <section id="Rule_4" class="main-section">
-                <div>
-                    <header class="header-rule">Rule 4</header>:
-                    <p class="header-p">No function should be longer than what can be printed on a single sheet of paper in a standard format with one
-                        line per statement and one line per declaration. Typically, this means no more than about 60 lines of code per function.</p>
-                </div>
+                <header class="header-rule">Rule 4</header>:
+                <p class="header-p">No function should be longer than what can be printed on a single sheet of paper in a standard format with one
+                    line per statement and one line per declaration. Typically, this means no more than about 60 lines of code per function.</p>
                 <article>
-                    <p><span>Rationale</span> : Each function should be a logical unit in the code that is understandable and verifiable as a unit. It is much
+                    <p><span class="before">Rationale</span> : Each function should be a logical unit in the code that is understandable and verifiable as a unit. It is much
                         harder to understand a logical unit that spans multiple pages. Excessively long functions are often a sign of poorly
                         structured code.</p>
                 </article>
             </section>
             <section id="Rule_5" class="main-section">
-                <div>
-                    <header class="header-rule">Rule 5</header>:
-                    <p class="header-p">The code's assertion density should average to minimally two assertions per function. Assertions must be used to
-                        check for anomalous conditions that should never happen in real-life executions. Assertions must be side-effect free and
-                        should be defined as Boolean tests. When an assertion fails, an explicit recovery action must be taken such as returning
-                        an error condition to the caller of the function that executes the failing assertion. Any assertion for which a static checking
-                        tool can prove that it can never fail or never hold violates this rule.
-                        </p>
-                </div>
+                <header class="header-rule">Rule 5</header>:
+                <p class="header-p">The code's assertion density should average to minimally two assertions per function. Assertions must be used to
+                    check for anomalous conditions that should never happen in real-life executions. Assertions must be side-effect free and
+                    should be defined as Boolean tests. When an assertion fails, an explicit recovery action must be taken such as returning
+                    an error condition to the caller of the function that executes the failing assertion. Any assertion for which a static checking
+                    tool can prove that it can never fail or never hold violates this rule.
+                    </p>
                 <article>
-                    <p><span>Rationale</span> : Statistics for industrial coding efforts indicate that unit tests often find at least one defect per 10 to 100 lines
+                    <p><span class="before">Rationale</span> : Statistics for industrial coding efforts indicate that unit tests often find at least one defect per 10 to 100 lines
                         of written code. The odds of intercepting defects increase significantly with increasing assertion density. Using assertions
                         is often recommended as part of a strong defensive coding strategy. Developers can use assertions to verify pre- and
                         postconditions of functions, parameter values, return values of functions, and loop invariants. Because the proposed
@@ -177,25 +167,21 @@
                 </article>
             </section>
             <section id="Rule_6" class="main-section">
-                <div>
-                    <header class="header-rule">Rule 6</header>:
-                    <p class="header-p">Declare alldata objects at the smallest possible level of scope.</p>
-                </div>
+                <header class="header-rule">Rule 6</header>:
+                <p class="header-p">Declare alldata objects at the smallest possible level of scope.</p>
                 <article>
-                    <p><span>Rationale</span> : This rule supports a basic principle of data hiding. Clearly, if an object is not in scope, othermodules cannot
+                    <p><span class="before">Rationale</span> : This rule supports a basic principle of data hiding. Clearly, if an object is not in scope, othermodules cannot
                         reference or corrupt its value. Similarly, if a tester must diagnose an object's erroneous value, the fewer the number of
                         statements where the value could have been assigned, the easier it is to diagnose the problem. The rule also discourages
                         the reuse of variables for multiple, incompatible purposes, which can complicate fault diagnosis.</p>
                 </article>
             </section>
             <section id="Rule_7" class="main-section">
-                <div>
-                    <header class="header-rule">Rule 7</header>:
-                    <p class="header-p">Each calling function must check the return value of nonvoid functions, and each called function must check the
-                        validity of all parameters provided by the caller.</p>
-                </div>
+                <header class="header-rule">Rule 7</header>:
+                <p class="header-p">Each calling function must check the return value of nonvoid functions, and each called function must check the
+                    validity of all parameters provided by the caller.</p>
                 <article>
-                    <p><span>Rationale</span> : This is possibly the most frequently violated rule, and therefore it is somewhat more suspect for inclusion as a
+                    <p><span class="before">Rationale</span> : This is possibly the most frequently violated rule, and therefore it is somewhat more suspect for inclusion as a
                         general rule. In its strictest form, this rule means that even the return value of <code>printf</code> statements and file <code>close</code> statements
                         must be checked. Yet, if the response to an error would be no different than the response to success, there is little point
                         in explicitly checking a return value. This is often the case with calls to <code>printf</code> and <code>close</code>. In cases like these, explicitly
@@ -207,14 +193,12 @@
                 </article>
             </section>
             <section id="Rule_8" class="main-section">
-                <div>
-                    <header class="header-rule">Rule 8</header>:
-                    <p class="header-p">The use of the preprocessor must be limited to the inclusion of header files and simple macro definitions. Token
-                        pasting, variable argument lists (ellipses), and recursive macro calls are not allowed. All macros must expand into
-                        complete syntactic units. The use of conditional compilation directives must be kept to a minimum.</p>
-                </div>
+                <header class="header-rule">Rule 8</header>:
+                <p class="header-p">The use of the preprocessor must be limited to the inclusion of header files and simple macro definitions. Token
+                    pasting, variable argument lists (ellipses), and recursive macro calls are not allowed. All macros must expand into
+                    complete syntactic units. The use of conditional compilation directives must be kept to a minimum.</p>
                 <article>
-                    <p>Rationale : The C preprocessor is a powerful obfuscation tool that can destroy code clarity and befuddle many text-based
+                    <p><span class="before">Rationale</span> : The C preprocessor is a powerful obfuscation tool that can destroy code clarity and befuddle many text-based
                         checkers. The effect of constructs in unrestricted preprocessor code can be extremely hard to decipher, even with a formal
                         language definition. In a new imple-
                         mentation of the C preprocessor, developers often must resort to using earlier implementations to interpret complex
@@ -228,14 +212,12 @@
                 </article>
             </section>
             <section id="Rule_9" class="main-section">
-                <div>
-                    <header class="header-rule">Rule 9</header>:
-                    <p class="header-p">The use of pointers must be restricted. Specifically, no more than one level of dereferencing should be used.
-                        Pointer dereference operations may not be hidden in macro definitions or inside typedef declarations. Function pointers
-                        are not permitted.</p>
-                </div>
+                <header class="header-rule">Rule 9</header>:
+                <p class="header-p">The use of pointers must be restricted. Specifically, no more than one level of dereferencing should be used.
+                    Pointer dereference operations may not be hidden in macro definitions or inside typedef declarations. Function pointers
+                    are not permitted.</p>
                 <article>
-                    <p><span>Rationale</span>: Pointers are easily misused, even by experienced programmers. They can make it hard to follow or analyze the
+                    <p><span class="before">Rationale</span> : Pointers are easily misused, even by experienced programmers. They can make it hard to follow or analyze the
                         flow of data in a program, especially by tool-based analyzers. Similarly, function pointers should be used only if there is a
                         very strong justification for doing so because they can seriously restrict the types of automated checks that code checkers
                         can perform. For example, if function pointers are used, it can become impossible for a tool to prove the absence of
@@ -243,14 +225,12 @@
                 </article>
             </section>
             <section id="Rule_10" class="main-section">
-                <div>
-                    <header class="header-rule">Rule 10</header>:
-                    <p class="header-p">All code must be compiled, from the first day of development, with all compiler warnings enabled at the most
-                        pedantic setting available. All code must compile without warnings. All code must also be checked daily with at least one,
-                        but preferably more than one, strong static source code analyzer and should pass all analyses with zero warnings.</p>
-                </div>
+                <header class="header-rule">Rule 10</header>:
+                <p class="header-p">All code must be compiled, from the first day of development, with all compiler warnings enabled at the most
+                    pedantic setting available. All code must compile without warnings. All code must also be checked daily with at least one,
+                    but preferably more than one, strong static source code analyzer and should pass all analyses with zero warnings.</p>
                 <article>
-                    <p>Rationale : There are several extremely effective static source code analyzers on the market today, and quite a few
+                    <p><span class="before">Rationale</span> : There are several extremely effective static source code analyzers on the market today, and quite a few
                         freeware tools as well. There simply is no excuse for any software development effort not to use this readily available
                         technology. It should be considered routine practice, even for noncritical code development.</p>
                     <p>The rule of zero warnings applies even when the compiler or the static analyzer gives an erroneous warning: If the
