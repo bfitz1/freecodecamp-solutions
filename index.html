@@ -194,7 +194,25 @@
                 </article>
             </section>
             <section id="Rule_8" class="main-section">
-                <header>Rule 8</header>
+                <div>
+                    <header>Rule 8</header>:
+                    <p>he use of the preprocessor must be limited to the inclusion of header files and simple macro definitions. Token
+                        pasting, variable argument lists (ellipses), and recursive macro calls are not allowed. All macros must expand into
+                        complete syntactic units. The use of conditional compilation directives must be kept to a minimum.</p>
+                </div>
+                <article>
+                    <p>Rationale : The C preprocessor is a powerful obfuscation tool that can destroy code clarity and befuddle many text-based
+                        checkers. The effect of constructs in unrestricted preprocessor code can be extremely hard to decipher, even with a formal
+                        language definition. In a new imple-
+                        mentation of the C preprocessor, developers often must resort to using earlier implementations to interpret complex
+                        defining language in the C standard.</p>
+                    <p>The rationale for the caution against conditional compilation is equally important. With just 10 conditional compilation
+                        directives, there could be up to 2<sup>10</sup> possible versions of the code, each of which would have to be tested—causing a huge
+                        increase in the required test effort. The use of conditional compilation cannot always be avoided, but even in large
+                        software development efforts there is rarely justification for more than one or two such directives, beyond the standard
+                        boilerplate that avoids multiple inclusions of the same header file. A tool-based checker should flag each use and each use
+                        should be justified in the code.</p>
+                </article>
             </section>
             <section id="Rule_9" class="main-section">
                 <header>Rule 9</header>
