@@ -60,6 +60,10 @@ body {
 }
 
 .cat-right-inner-ear {
+    border-bottom-right-radius: 40%;
+    border-bottom-left-radius: 40%;
+    border-top-left-radius: 90px;
+    border-top-right-radius: 10px;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
     border-bottom: 40px solid #3b3b4f;
