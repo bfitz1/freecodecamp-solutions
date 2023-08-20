@@ -79,4 +79,6 @@ body {
     position: absolute;
     top: 54px;
     left: 39px;
+    border-radius: 60%;
+    transform: rotate(25deg);
 }
