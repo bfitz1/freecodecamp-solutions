@@ -33,6 +33,8 @@ body {
 }
 
 .cat-right-ear {
+    border-top-left-radius: 90px;
+    border-top-right-radius: 10px;
     border-left: 35px solid transparent;
     border-right: 35px solid transparent;
     border-bottom: 70px solid #5e5e5e;
