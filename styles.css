@@ -71,3 +71,9 @@ body {
     top: 22px;
     left: -20px;
 }
+
+.cat-left-eye {
+    width: 30px;
+    height: 40px;
+    background-color: #000;
+}
