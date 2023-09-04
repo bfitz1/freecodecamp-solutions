@@ -20,6 +20,7 @@ body {
 .bb1 {
     --building-color1: #aa80ff;
     --building-color2: #66cc99;
+    --building-color3: #cc6699;
     width: 10%;
     height: 70%;
     display: flex;
@@ -60,6 +61,7 @@ body {
 .bb3 {
     width: 10%;
     height: 55%;
+    background-color: var(--building-color3, pink);
 }
 
 .bb4 {
