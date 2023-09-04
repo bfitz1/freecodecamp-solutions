@@ -52,7 +52,7 @@ body {
 }
 
 .bb2 {
-    background-color: var(--building-color2);
+    background-color: var(--building-color2, green);
     width: 10%;
     height: 50%;
 }
