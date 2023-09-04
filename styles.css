@@ -26,6 +26,8 @@ body {
     justify-content: space-evenly;
 }
 
+/* BACKGROUND BUILDINGS - "bb" stands for "background building" */
+
 .bb1 {
     width: 10%;
     height: 70%;
@@ -75,6 +77,8 @@ body {
     height: 58%;
     background-color: var(--building-color4);
 }
+
+/* FOREGROUND BUILDINGS - "fb" stands for "foreground building" */
 
 .fb1 {
     background-color: var(--building-color4);
