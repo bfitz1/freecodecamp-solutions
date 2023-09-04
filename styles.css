@@ -30,16 +30,19 @@ body {
 }
 
 .bb1b {
+    background-color: var(--building-color1);
     width: 80%;
     height: 10%;
 }
 
 .bb1c {
+    background-color: var(--building-color1);
     width: 90%;
     height: 10%;
 }
 
 .bb1d {
+    background-color: var(--building-color1);
     width: 100%;
     height: 70%;
 }
