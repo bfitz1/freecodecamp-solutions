@@ -95,12 +95,16 @@ body {
 }
 
 .fb4 {
+    position: relative;
+    left: 10%;
     background-color: var(--building-color1);
     width: 8%;
     height: 45%;
 }
 
 .fb5 {
+    position: relative;
+    right: 10%;
     background-color: var(--building-color2);
     width: 10%;
     height: 33%;
