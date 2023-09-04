@@ -77,31 +77,37 @@ body {
 }
 
 .fb1 {
+    background-color: var(--building-color4);
     width: 10%;
     height: 60%;
 }
 
 .fb2 {
+    background-color: var(--building-color3);
     width: 10%;
     height: 40%;
 }
 
 .fb3 {
+    background-color: var(--building-color1);
     width: 10%;
     height: 35%;
 }
 
 .fb4 {
+    background-color: var(--building-color1);
     width: 8%;
     height: 45%;
 }
 
 .fb5 {
+    background-color: var(--building-color2);
     width: 10%;
     height: 33%;
 }
 
 .fb6 {
+    background-color: var(--building-color3);
     width: 9%;
     height: 38%;
 }
