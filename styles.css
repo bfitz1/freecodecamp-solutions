@@ -15,6 +15,7 @@ body {
 }
 
 .bb1 {
+    --building-color1: #999;
     width: 10%;
     height: 70%;
     display: flex;
