@@ -148,6 +148,16 @@ body {
     height: 60%;
 }
 
+.fb1b {
+    width: 60%;
+    height: 10%;
+}
+
+.fb1c {
+    width: 100%;
+    height: 80%;
+}
+
 .fb2 {
     background-color: var(--building-color3);
     width: 10%;
