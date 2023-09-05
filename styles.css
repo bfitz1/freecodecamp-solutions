@@ -29,6 +29,10 @@ body {
     justify-content: space-evenly;
 }
 
+.building-wrap {
+    
+}
+
 /* BACKGROUND BUILDINGS - "bb" stands for "background building" */
 
 .bb1 {
@@ -108,7 +112,7 @@ body {
 
 .bb4a {
     width: 3%;
-    height: 10%
+    height: 10%;
     background-color: var(--building-color4);
 }
 
