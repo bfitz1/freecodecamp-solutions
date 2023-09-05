@@ -46,22 +46,15 @@ body {
 }
 
 .bb1a {
-    background-color: var(--building-color1);
-    background: linear-gradient(var(--building-color1), var(--window-color1));
     width: 70%;
-    height: 10%;
 }
 
 .bb1b {
-    background-color: var(--building-color1);
     width: 80%;
-    height: 10%;
 }
 
 .bb1c {
-    background-color: var(--building-color1);
     width: 90%;
-    height: 10%;
 }
 
 .bb1d {
