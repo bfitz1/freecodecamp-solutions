@@ -201,7 +201,6 @@ body {
 }
 
 .fb3 {
-    background-color: var(--building-color1);
     width: 10%;
     height: 35%;
 }
@@ -209,11 +208,13 @@ body {
 .fb3a {
     width: 80%;
     height: 15%;
+    background-color: var(--building-color1);
 }
 
 .fb3b {
     width: 100%;
     height: 35%;
+    background-color: var(--building-color1);
 }
 
 .fb4 {
