@@ -143,7 +143,6 @@ body {
 /* FOREGROUND BUILDINGS - "fb" stands for "foreground building" */
 
 .fb1 {
-    background-color: var(--building-color4);
     width: 10%;
     height: 60%;
 }
@@ -151,6 +150,7 @@ body {
 .fb1b {
     width: 60%;
     height: 10%;
+    background-color: var(--building-color4);
 }
 
 .fb1c {
