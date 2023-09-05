@@ -226,7 +226,6 @@ body {
 .fb4 {
     position: relative;
     left: 10%;
-    background-color: var(--building-color1);
     width: 8%;
     height: 45%;
 }
@@ -234,6 +233,7 @@ body {
 .fb4b {
     width: 100%;
     height: 89%;
+    background-color: var(--building-color1);
 }
 
 .fb5 {
