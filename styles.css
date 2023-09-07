@@ -143,4 +143,5 @@ hr {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: repeat(3, min-content);
+    gap: 2rem;
 }
