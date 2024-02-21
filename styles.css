@@ -1,0 +1,43 @@
+body {
+    font-family: sans-serif;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+#header-img {
+    flex: 1 1 0;
+    margin: 0;
+}
+
+#header-img img {
+    width: 50%;
+}
+
+#nav-bar {
+    flex: 1 1 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+#nav-bar > div {
+    flex: 1 1 0;
+}
+
+#pricing {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+}
+
+footer > ul {
+    display: flex;
+}
