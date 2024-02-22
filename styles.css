@@ -64,6 +64,7 @@ body {
         gray,
         rgb(239, 240, 228)
     );
+    border-radius: 70% 70% 65% 65%;
 }
 
 .ground {
