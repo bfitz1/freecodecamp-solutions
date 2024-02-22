@@ -119,6 +119,12 @@ body {
     right: 25%;
 }
 
+.eye-lid {
+    width: 150%;
+    height: 100%;
+    background-color: var(--penguin-face);
+}
+
 .penguin-body {
     width: 53%;
     height: 45%;
