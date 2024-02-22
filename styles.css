@@ -47,3 +47,8 @@
     border: 2px solid;
     transform-origin: 50% 0%;
 }
+
+.cabin:nth-of-type(1) {
+    right: -8.5%;
+    top: 50%;
+}
