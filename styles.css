@@ -18,6 +18,7 @@ body {
         rgb(203, 241, 228),
         rgb(80, 183, 255)
     );
+    position: absolute;
 }
 
 .penguin {
