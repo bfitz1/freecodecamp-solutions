@@ -96,6 +96,7 @@
 @keyframes cabins {
     0% {
         transform: rotate(0deg);
+        background-color: yellow;
     }
 
     100% {
