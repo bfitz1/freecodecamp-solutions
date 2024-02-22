@@ -98,7 +98,9 @@
         transform: rotate(0deg);
         background-color: yellow;
     }
-
+    50% {
+        background-color: purple;
+    }
     100% {
         transform: rotate(-360deg);
     }
