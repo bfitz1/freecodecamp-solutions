@@ -1,8 +1,32 @@
+html {
+    font-size: 100%;
+    line-height: 1.5rem;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: sans-serif;
+    font-family: "Segoe UI";
+    margin: 0;
+    background: linear-gradient(
+        90deg,
+        #74c6be 0%,
+        #74c6be 25%,
+        #cfdb00 25%,
+        #cfdb00 50%,
+        #ea5504 50%,
+        #ea5504 75%,
+        #b70e5e 75%
+    );
+    background-size: 100% .5rem;
+    background-repeat: no-repeat;
+}
+
+main {
+    margin: 1rem;
 }
 
 #header {
+    margin: 1.5rem .8rem;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -16,11 +40,13 @@ body {
 
 #header-img img {
     width: 50%;
+    display: block;
 }
 
 #nav-bar {
     flex: 1 1 0;
     display: flex;
+    align-items: center;
     justify-content: space-around;
 }
 
@@ -28,16 +54,112 @@ body {
     flex: 1 1 0;
 }
 
+#form {
+    text-align: center;
+}
+
+#form input[type="email"] {
+    padding: .5rem;
+    width: 30%;
+    margin-bottom: 1rem;
+}
+
+#form input[type="submit"] {
+    padding: .80rem 1.80rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+    background: rgb(240, 240, 240);
+    border: 2px solid rgb(100, 100, 100);
+}
+
+a, a:visited, a:active {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+#how-it-works {
+    text-align: center;
+}
+
 #pricing {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+#pricing > div {
+    border: 2px solid rgb(100, 100, 100);
+    flex: 1 1 0;
+    border-radius: 10px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-bottom: 1rem;
+    background: linear-gradient(
+        90deg,
+        #74c6be 0%,
+        #74c6be 25%,
+        #cfdb00 25%,
+        #cfdb00 50%,
+        #ea5504 50%,
+        #ea5504 75%,
+        #b70e5e 75%
+    );
+    background-size: 100% .5rem;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#pricing > div h2 {
+    padding: 1.5rem 1rem 1rem 1rem;
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.blurb {
+    padding: .75rem;
+}
+
+#pricing > div button {
+    padding: .80rem 1.80rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin: auto auto 0 auto;
+    width: max-content;
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+    background: rgb(240, 240, 240);
+    border: 2px solid rgb(100, 100, 100);
 }
 
 footer {
-    display: flex;
-    flex-direction: column;
+    text-align: right;
+    padding: 1rem;
+    background-color: rgb(240, 240, 240);
 }
 
-footer > ul {
-    display: flex;
+footer ul {
+    list-style: none;
+}
+
+footer ul li {
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+footer p {
+    font-size: .85rem;
 }
