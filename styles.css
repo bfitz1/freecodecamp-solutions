@@ -202,7 +202,7 @@ body {
     top: 10%;
     left: 25%;
     border-radius: 0% 0% 100% 100%;
-    opacity: 70%; 
+    opacity: 70%;
 }
 
 .foot {
@@ -211,6 +211,7 @@ body {
     background-color: var(--penguin-picorna);
     top: 85%;
     border-radius: 50%;
+    z-index: -1;
 }
 
 .foot.left {
