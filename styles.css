@@ -19,6 +19,7 @@ body {
         rgb(80, 183, 255)
     );
     position: absolute;
+    transform: skew(0deg, 44deg);
 }
 
 .penguin {
