@@ -52,6 +52,8 @@ body {
     width: 300px;
     height: 300px;
     margin: 75px auto 0 auto;
+    z-index: 4;
+    position: relative;
 }
 
 .ground {
