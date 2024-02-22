@@ -213,6 +213,14 @@ body {
     border-radius: 50%;
 }
 
+.foot.left {
+    left: 25%;
+}
+
+.foot.right {
+    right: 25%;
+}
+
 .ground {
     width: 100vw;
     height: 400px;
