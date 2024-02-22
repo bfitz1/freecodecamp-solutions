@@ -204,6 +204,12 @@ body {
     opacity: 70%; 
 }
 
+.foot {
+    width: 15%;
+    height: 30%;
+    background-color: orange;
+}
+
 .ground {
     width: 100vw;
     height: 400px;
