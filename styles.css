@@ -56,6 +56,10 @@ body {
     position: relative;
 }
 
+.penguin * {
+    position: absolute;
+}
+
 .penguin-head {
     width: 50%;
     height: 45%;
