@@ -62,6 +62,10 @@ body {
     position: relative;
 }
 
+.penguin:active {
+    transform: scale(1.5);
+}
+
 .penguin * {
     position: absolute;
 }
