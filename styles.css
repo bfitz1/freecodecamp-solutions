@@ -1,6 +1,7 @@
 :root {
     --penguin-face: white;
     --penguin-picorna: orange;
+    --penguin-skin: gray;
 }
 
 body {
@@ -70,7 +71,7 @@ body {
     height: 45%;
     background: linear-gradient(
         45deg,
-        gray,
+        var(--penguin-skin),
         rgb(239, 240, 228)
     );
     border-radius: 70% 70% 65% 65%;
@@ -198,7 +199,7 @@ body {
     position: absolute;
     width: 50%;
     height: 45%;
-    background-color: gray;
+    background-color: var(--penguin-skin);
     top: 10%;
     left: 25%;
     border-radius: 0% 0% 100% 100%;
@@ -210,7 +211,7 @@ body {
     height: 60%;
     background: linear-gradient(
         90deg,
-        gray,
+        var(--penguin-skin),
         rgb(209, 210, 199)
     );
 }
