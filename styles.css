@@ -1,0 +1,52 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 100%;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: yellow;
+}
+
+#navbar ul {
+    text-align: right;
+}
+
+#navbar ul li { 
+    list-style: none;
+    display: inline-block;
+    line-height: 3rem;
+    padding: 0 1rem;
+}
+
+#welcome-section {
+    padding-top: 3rem;
+    background-color: aliceblue;
+    height: 100vh;
+    display: grid;
+}
+
+#welcome-section hgroup {
+    margin: auto 1rem;
+}
+
+#projects {
+    padding-top: 3rem;
+    min-height: 100vh;
+    background-color: salmon;
+}
+
+#contact {
+    padding-top: 3rem;
+}
+
+@media only screen and (min-width: 600px) {
+
+}
