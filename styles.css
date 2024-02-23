@@ -215,6 +215,7 @@ body {
         rgb(209, 210, 199)
     );
     border-radius: 30% 30% 30% 120%;
+    z-index: -1;
 }
 
 .arm.left {
