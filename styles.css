@@ -226,6 +226,7 @@ body {
 .arm.right {
     top: 0%;
     right: -5%;
+    transform: rotate(-45deg);
 }
 
 .foot {
