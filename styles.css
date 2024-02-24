@@ -13,11 +13,15 @@ html {
     font-family: "Roboto";
 }
 
+header {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+
 #navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: yellow;
+    background-color: #FCA311;
 }
 
 #navbar ul {
@@ -34,6 +38,7 @@ html {
 #navbar a {
     text-decoration: none;
     font-weight: 500;
+    color: #000000;
 }
 
 #welcome-section, #projects, #contact, footer {
@@ -45,7 +50,7 @@ html {
 }
 
 #welcome-section {
-    background-color: aliceblue;
+    background-color: #000000;
     height: 100vh;
     display: grid;
 }
@@ -64,16 +69,18 @@ hgroup h1 {
     font-weight: 900;
     line-height: 6rem;
     text-transform: uppercase;
+    color: #FCA311;
 }
 
 hgroup p {
     font-size: 2rem;
     font-weight: 300;
+    color: #FFFFFF;
 }
 
 #projects {
     min-height: calc(100vh - 3rem);
-    background-color: salmon;
+    background-color: #14213D;
 }
 
 .project-tile {
@@ -84,16 +91,26 @@ hgroup p {
     font-size: 1.5rem;
     font-weight: 500;
     text-decoration: none;
+    color: #FCA311;
+}
+
+.project-tile p {
+    color: #FFFFFF;
 }
 
 .more a {
     display: inline-block;
-    background-color: bisque;
-    border: 2px solid black;
+    background-color: #FCA311;
+    border: 2px solid #000000;
+    color: #000000;
     border-radius: 5px;
     padding: 1rem 2rem;
     font-weight: 500;
     text-decoration: none;
+}
+
+#contact {
+    background-color: #000000;;
 }
 
 #contact ul {
@@ -112,11 +129,13 @@ hgroup p {
 
 #contact a {
     text-decoration: none;
+    color: #FCA311;
 }
 
 footer {
-    opacity: 50%;
     text-align: center;
+    background-color: #000000;
+    color: #353535;
 }
 
 @media only screen and (max-width: 600px) {
