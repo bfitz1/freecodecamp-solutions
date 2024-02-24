@@ -1,3 +1,7 @@
+:root {
+    --accent-color: yellow;
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -6,6 +10,7 @@
 
 html {
     font-size: 100%;
+    font-family: "Roboto";
 }
 
 #navbar {
@@ -22,31 +27,110 @@ html {
 #navbar ul li { 
     list-style: none;
     display: inline-block;
-    line-height: 3rem;
-    padding: 0 1rem;
+    line-height: 1rem;
+    padding: 1rem 1.5rem;
+}
+
+#navbar a {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#welcome-section, #projects, #contact, footer {
+    padding: 2rem;
+}
+
+#welcome-section, #projects, #contact {
+    scroll-margin-top: 3rem;
 }
 
 #welcome-section {
-    padding-top: 3rem;
     background-color: aliceblue;
     height: 100vh;
     display: grid;
 }
 
-#welcome-section hgroup {
-    margin: auto 1rem;
+#welcome-section hgroup.center {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.no-wrap { white-space: nowrap; }
+.space { word-spacing: -0.25rem; white-space: nowrap;}
+
+hgroup h1 {
+    font-family: "Roboto Condensed";
+    font-size: 6rem;
+    font-weight: 900;
+    line-height: 6rem;
+    text-transform: uppercase;
+}
+
+hgroup p {
+    font-size: 2rem;
+    font-weight: 300;
 }
 
 #projects {
-    padding-top: 3rem;
-    min-height: 100vh;
+    min-height: calc(100vh - 3rem);
     background-color: salmon;
 }
 
-#contact {
-    padding-top: 3rem;
+.project-tile {
+    margin: 3rem 0;
 }
 
-@media only screen and (min-width: 600px) {
+.project-tile a {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-decoration: none;
+}
 
+.more a {
+    display: inline-block;
+    background-color: bisque;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+#contact ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 5rem 0 3rem 0;
+}
+
+#contact ul li {
+    text-align: center;
+    list-style: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 2rem;
+}
+
+#contact a {
+    text-decoration: none;
+}
+
+footer {
+    opacity: 50%;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    hgroup h1 {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
+    hgroup p {
+        font-size: 1.25rem;
+    }
+
+    #contact ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }   
 }
