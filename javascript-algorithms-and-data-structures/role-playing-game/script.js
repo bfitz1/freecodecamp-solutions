@@ -259,7 +259,7 @@ function pick(guess) {
     }
     text.innerText = "You picked " + guess + ". Here are the random numbers:\n";
     for (let i = 0; i < 10; i++) {
-
+        text.innerText += numbers[i] + "\n";
     }
 }
 
