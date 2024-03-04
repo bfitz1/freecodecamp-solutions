@@ -96,6 +96,8 @@ const playSong = (id) => {
         audio.currentTime = userData?.songCurrentTime;
     }
     userData.currentSong = song;
+    playButton.classList.add('playing');
+    audio.play();
 };
 
 const renderSongs = (array) => {
