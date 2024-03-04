@@ -265,7 +265,10 @@ pauseButton.addEventListener('click', pauseSong);
 nextButton.addEventListener('click', playNextSong);
 previousButton.addEventListener('click', playPreviousSong);
 shuffleButton.addEventListener('click', shuffle);
-audio.addEventListener('ended', () => {});
+audio.addEventListener('ended', () => {
+    const currentSongIndex = getCurrentSongIndex();
+    const nextSongExists = currentSongIndex < userData.songs.length - 1;
+});
 
 const sortSongs = () => {
     userData?.songs.sort((a, b) => {
