@@ -130,7 +130,8 @@ playButton.addEventListener('click', () => {
         playSong(userData?.currentSong.id);
     }
 });
-renderSongs(sortSongs());
+
+pauseButton.addEventListener('click', pauseSong);
 
 const sortSongs = () => {
     userData?.songs.sort((a, b) => {
@@ -146,3 +147,5 @@ const sortSongs = () => {
     });
     return userData?.songs;
 };
+
+renderSongs(sortSongs());
