@@ -270,6 +270,9 @@ audio.addEventListener('ended', () => {
     const nextSongExists = currentSongIndex < userData.songs.length - 1;
     if (nextSongExists) {
         playNextSong();
+    } else {
+        userData.currentSong = null;
+        userData.songCurrentTime = 0;
     }
 });
 
