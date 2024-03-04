@@ -127,6 +127,8 @@ const playPreviousSong = () => {
     }
 };
 
+const setPlayerDisplay = () => {};
+
 const highlightCurrentSong = () => {
     const playlistSongElements = document.querySelectorAll('.playlist-song');
     const songToHighlight = document.getElementById(`song-${userData?.currentSong?.id}`);
@@ -136,7 +138,7 @@ const highlightCurrentSong = () => {
     if (songToHighlight) {
         songToHighlight.setAttribute('aria-current', 'true');
     }
-}
+};
 
 const renderSongs = (array) => {
     const songsHTML = array.map((song) => {
