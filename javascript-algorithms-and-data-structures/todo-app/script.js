@@ -53,6 +53,7 @@ const deleteTask = (buttonEl) => {
 
 const editTask = (buttonEl) => {
     const dataArrIndex = taskData.findIndex((item) => item.id === buttonEl.parentElement.id);
+    const currentTask = taskData[dataArrIndex];
 };
 
 const reset = () => {
