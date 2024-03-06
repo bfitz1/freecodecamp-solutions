@@ -27,6 +27,7 @@ openTaskFormBtn.addEventListener('click', () => {
 
 closeTaskFormBtn.addEventListener('click', () => {
     confirmCloseDialog.showModal();
+    const formInputsContainValues = titleInput.value || dateInput.value || descriptionInput.value;
 })
 
 cancelBtn.addEventListener('click', () => {
