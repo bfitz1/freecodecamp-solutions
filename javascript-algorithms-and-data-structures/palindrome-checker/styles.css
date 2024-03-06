@@ -1,0 +1,68 @@
+:root {
+    font-size: 100%;
+    --bg: rgb(15, 15, 15);
+    --fg: rgb(255, 255, 255);
+    --accent1: rgb(255, 196, 0);
+    --accent2: rgb(219, 161, 0);
+}
+
+html {
+    font-family: 'Segoe UI', Helvetica, sans-serif;
+    background-color: var(--bg);
+    color: var(--fg);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.prompt {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    margin: 1rem 0;
+    text-transform: uppercase;
+}
+
+#text-input {
+    display: block;
+    color: var(--accent1);
+    background-color: var(--bg);
+    border: 0px solid var(--accent1);
+    border-bottom: 3px solid var(--accent1);
+    max-width: 80vw;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#check-btn {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 1rem;
+    margin: 1rem 0;
+    color: var(--fg);
+    background-color: var(--accent2);
+    border-width: 0;
+    border-radius: 6px;
+}
+
+#result {
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 6px;
+}
+
+.word {
+    color: var(--accent1);
+    font-weight: bold;
+}

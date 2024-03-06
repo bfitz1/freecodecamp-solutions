@@ -5,6 +5,7 @@ const result = document.getElementById('result');
 
 check_btn.addEventListener('click', (event) => {
     event.preventDefault();
+    result.innerHTML = '';
 
     const word = text_input.value.toLowerCase().replace(/[^A-Za-z0-9]/g, '');
     if (word === "") {
@@ -12,10 +13,17 @@ check_btn.addEventListener('click', (event) => {
         return;
     }
 
+    const word_element = document.createElement('span');
+    word_element.classList.add('word');
+    word_element.textContent = text_input.value;
+
+
     const reversed = word.split('').reverse().join('');
     if (word === reversed) {
-        result.textContent = `${text_input.value} is a palindrome.`;
+        result.appendChild(word_element);
+        result.appendChild(document.createTextNode(' is a palindrome.'));
     } else {
-        result.textContent = `${text_input.value} is not a palindrome.`;
+        result.appendChild(word_element);
+        result.appendChild(document.createTextNode(' is not a palindrome.'));
     }
 });
