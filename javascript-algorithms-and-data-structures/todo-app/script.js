@@ -59,7 +59,7 @@ const deleteTask = (buttonEl) => {
 
 const editTask = (buttonEl) => {
     const dataArrIndex = taskData.findIndex((item) => item.id === buttonEl.parentElement.id);
-    const currentTask = taskData[dataArrIndex];
+    currentTask = taskData[dataArrIndex];
 
     titleInput.value = currentTask.title;
     dateInput.value = currentTask.date;
@@ -77,6 +77,10 @@ const reset = () => {
     taskForm.classList.toggle('hidden');
     currentTask = {};
 };
+
+if (taskData.length) {
+    updateTaskContainer();
+}
 
 openTaskFormBtn.addEventListener('click', () => {
     taskForm.classList.toggle('hidden');
