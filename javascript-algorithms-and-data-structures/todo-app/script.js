@@ -45,7 +45,9 @@ const updateTaskContainer = () => {
     });
 };
 
-const deleteTask = () => {};
+const deleteTask = (buttonEl) => {
+    const dataArrIndex = taskData.findIndex((item) => item.id === buttonEl.parentElement.id);
+};
 
 const reset = () => {
     titleInput.value = '';
