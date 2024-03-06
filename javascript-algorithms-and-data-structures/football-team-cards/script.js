@@ -192,4 +192,6 @@ const setPlayerCards = (arr = players) => {
     }).join('');
 };
 
-playersDropdownList.addEventListener('change', (e) => {});
+playersDropdownList.addEventListener('change', (e) => {
+    playerCards.innerHTML = '';
+});
