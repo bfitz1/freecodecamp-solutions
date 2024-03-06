@@ -45,6 +45,8 @@ const updateTaskContainer = () => {
     });
 };
 
+const deleteTask = () => {};
+
 const reset = () => {
     titleInput.value = '';
     dateInput.value = '';
