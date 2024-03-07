@@ -33,7 +33,7 @@ const showAnimation = () => {
     animationData.forEach((obj) => {
         setTimeout(() => {
             animationContainer.innerHTML += `
-                <p id="${obj.inputVal}" style="margin-top: ${obj.marginTop}px;"></p>
+                <p id="${obj.inputVal}" class="animation-frame" style="margin-top: ${obj.marginTop}px;"></p>
             `;
         }, obj.addElDelay);
     });
