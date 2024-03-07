@@ -1,3 +1,5 @@
+const callStack = [];
+
 const a = () => "freeCodeCamp" + b();
 const b = () => "is " + c();
 const c = () => "awesome!";
