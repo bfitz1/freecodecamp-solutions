@@ -1,4 +1,6 @@
 const a = () => "freeCodeCamp" + b();
+const b = () => "is " + c();
+const c = () => "awesome!";
 
 const numberInput = document.getElementById('number-input');
 const convertBtn = document.getElementById('convert-btn');
