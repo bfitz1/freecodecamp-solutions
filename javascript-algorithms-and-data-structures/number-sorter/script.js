@@ -1,3 +1,5 @@
 const sortButton = document.getElementById('sort');
 
-const sortInputArray = (event) => {};
+const sortInputArray = (event) => {
+    event.preventDefault();
+};
