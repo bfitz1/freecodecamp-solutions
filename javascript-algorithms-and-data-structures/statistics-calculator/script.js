@@ -14,6 +14,7 @@ const getMode = (array) => {
     if (new Set(Object.values(counts)).size === 1) {
         return null;
     }
+    const highest = Object.keys(counts);
 };
 
 const calculate = () => {
