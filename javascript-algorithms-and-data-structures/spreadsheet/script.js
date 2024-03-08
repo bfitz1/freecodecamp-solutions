@@ -11,4 +11,5 @@ window.onload = () => {
     };
     const letters = charRange('A', 'J');
     letters.forEach(createLabel);
+    range(1, 99).forEach((number) => {});
 }
