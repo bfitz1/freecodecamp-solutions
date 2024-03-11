@@ -5,6 +5,8 @@ const infixToFunction = {
     '/': (x, y) => x / y,
 };
 
+const infixEval = (str, regex) => str.replace(regex, () => {});
+
 const sum = (nums) => nums.reduce((acc, el) => acc + el);
 const isEven = (num) => num % 2 === 0;
 const average = (nums) => sum(nums) / nums.length;
