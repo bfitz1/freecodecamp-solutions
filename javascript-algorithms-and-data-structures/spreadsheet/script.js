@@ -41,6 +41,7 @@ const spreadsheetFunctions = {
     increment: (nums) => nums.map((el) => el + 1),
     random: ([x, y]) => Math.floor(Math.random()*(y - x)) + x,
     range: ([x, y]) => range(x, y),
+    nodupes: (nums) => nums.reduce((acc, el) => acc.includes(el) ? acc : acc.concat([el]), []),
 };
 
 const applyFunction = (str) => {
