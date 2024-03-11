@@ -1,5 +1,6 @@
 const infixToFunction = {
     '+': (x, y) => x + y,
+    '-': (x, y) => x - y,
 };
 
 const sum = (nums) => nums.reduce((acc, el) => acc + el);
