@@ -1,3 +1,5 @@
+const infixToFunction = {};
+
 const sum = (nums) => nums.reduce((acc, el) => acc + el);
 const isEven = (num) => num % 2 === 0;
 const average = (nums) => sum(nums) / nums.length;
