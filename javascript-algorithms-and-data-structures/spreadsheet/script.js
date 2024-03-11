@@ -13,6 +13,7 @@ const infixEval = (str, regex) => str.replace(
 const highPrecedence = (str) => {
     const regex = /([\d.]+)([*\/])([\d.]+)/;
     const str2 = infixEval(str, regex);
+    return str2 === str ? str : highPrecedence(str2);
 };
 
 const sum = (nums) => nums.reduce((acc, el) => acc + el);
