@@ -38,7 +38,7 @@ const applyFunction = (str) => {
     const str2 = infixEval(noHigh, infix);
     const functionCall = /([a-z0-9]*)\(([0-9., ]*)\)(?!.*\()/i
     const toNumberList = (args) => args.split(',').map(parseFloat);
-    const apply = (fn, args) => {};
+    const apply = (fn, args) => spreadsheetFunctions[fn.toLowerCase()];
 };
 const range = (start, end) => Array(end - start + 1).fill(start).map((element, index) => element + index);
 const charRange = (start, end) => range(start.charCodeAt(0), end.charCodeAt(0)).map((code) => String.fromCharCode(code));
