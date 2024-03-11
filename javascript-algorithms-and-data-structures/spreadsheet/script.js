@@ -39,7 +39,8 @@ const spreadsheetFunctions = {
     lasttwo: (nums) => nums.slice(nums.length - 2),
     has2: (nums) => nums.includes(2),
     increment: (nums) => nums.map((el) => el + 1),
-    random: (nums) => Math.floor(Math.random()*(nums[1] - nums[0])) + nums[0],
+    random: ([x, y]) => Math.floor(Math.random()*(y - x)) + x,
+    range: ([x, y]) => range(x, y),
 };
 
 const applyFunction = (str) => {
