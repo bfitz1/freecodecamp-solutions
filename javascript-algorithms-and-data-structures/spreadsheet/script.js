@@ -1,4 +1,6 @@
-const infixToFunction = {};
+const infixToFunction = {
+    '+': (x, y) => x + y,
+};
 
 const sum = (nums) => nums.reduce((acc, el) => acc + el);
 const isEven = (num) => num % 2 === 0;
