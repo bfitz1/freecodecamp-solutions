@@ -7,7 +7,7 @@ const infixToFunction = {
 
 const infixEval = (str, regex) => str.replace(
     regex, 
-    (_match, arg1, operator, arg2) => infixToFunction[operator]
+    (_match, arg1, operator, arg2) => infixToFunction[operator](arg1, arg2)
 );
 
 const sum = (nums) => nums.reduce((acc, el) => acc + el);
