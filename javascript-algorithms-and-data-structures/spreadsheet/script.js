@@ -42,6 +42,8 @@ const applyFunction = (str) => {
     return str2.replace(
         functionCall,
         (match, fn, args) => spreadsheetFunctions.hasOwnProperty(fn.toLowerCase())
+            ? apply(fn, args)
+            : match
     );
 };
 const range = (start, end) => Array(end - start + 1).fill(start).map((element, index) => element + index);
