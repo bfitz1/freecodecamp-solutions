@@ -107,5 +107,7 @@ class ShoppingCart {
         const product = products.find((item) => item.id === id);
         const { name, price } = product;
         this.items.push(product);
+        const totalCountPerProduct = {};
+        this.items.forEach((dessert) => {});
     }
 };
