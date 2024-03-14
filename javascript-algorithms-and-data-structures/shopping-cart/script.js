@@ -96,4 +96,6 @@ products.forEach(({ name, id, price, category }) => {
     `;
 });
 
-class ShoppingCart {};
+class ShoppingCart {
+    constructor() {}
+};
