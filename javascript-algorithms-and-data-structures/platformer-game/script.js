@@ -32,5 +32,7 @@ class Player {
         ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
     }
 
-    update() {}
+    update() {
+        this.draw();
+    }
 };
