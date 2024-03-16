@@ -76,6 +76,8 @@ const keys = {
     leftKey: { pressed: false },
 };
 
+const movePlayer = (key, xVelocity, isPressed) => {};
+
 const startGame = () => {
     canvas.style.display = 'block';
     startScreen.style.display = 'none';
