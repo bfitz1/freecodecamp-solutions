@@ -51,7 +51,7 @@ class Player {
         }
 
         if (this.position.x >= canvas.width - 2 * this.width) {
-            
+            this.position.x = canvas.width - 2 * this.width;
         }
     }
 };
