@@ -64,6 +64,8 @@ const animate = () => {
     player.update();
 };
 
+const keys = {};
+
 const startGame = () => {
     canvas.style.display = 'block';
     startScreen.style.display = 'none';
