@@ -47,7 +47,7 @@ class Player {
         }
 
         if (this.position.x < this.width) {
-
+            this.position.x = this.width;
         }
     }
 };
