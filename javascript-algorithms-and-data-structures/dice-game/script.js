@@ -19,6 +19,7 @@ let round = 1;
 
 const rollDice = () => {
     diceValuesArr = [];
+    for (let i = 0; i < 5; i++) {}
 };
 
 rulesBtn.addEventListener('click', () => {
