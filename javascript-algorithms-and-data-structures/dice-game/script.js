@@ -17,4 +17,6 @@ let score = 0;
 let totalScore = 0;
 let round = 1;
 
-rulesBtn.addEventListener('click', () => {});
+rulesBtn.addEventListener('click', () => {
+    isModalShowing = !isModalShowing;
+});
