@@ -57,7 +57,9 @@ class Player {
 };
 
 class Platform {
-    constructor(x, y) {}
+    constructor(x, y) {
+        this.position = { x, y };
+    }
 };
 
 const player = new Player();
