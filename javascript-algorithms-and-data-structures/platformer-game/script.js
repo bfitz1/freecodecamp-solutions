@@ -119,4 +119,6 @@ window.addEventListener('keydown', ({ key }) => {
     player.movePlayer(key, 8, true);
 });
 
-window.addEventListener('keyup', ({ key }) => {});
+window.addEventListener('keyup', ({ key }) => {
+    player.movePlayer(key, 0, false);
+});
