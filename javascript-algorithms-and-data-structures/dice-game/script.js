@@ -17,6 +17,8 @@ let score = 0;
 let totalScore = 0;
 let round = 1;
 
+const rollDice = () => {};
+
 rulesBtn.addEventListener('click', () => {
     isModalShowing = !isModalShowing;
 
