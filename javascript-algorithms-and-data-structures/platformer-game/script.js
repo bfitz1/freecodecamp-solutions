@@ -118,3 +118,5 @@ startBtn.addEventListener('click', startGame);
 window.addEventListener('keydown', ({ key }) => {
     player.movePlayer(key, 8, true);
 });
+
+window.addEventListener('keyup', ({ key }) => {});
