@@ -91,7 +91,11 @@ const platforms = platformPositions.map((platform) => new Platform(platform.x, p
 const animate = () => {
     requestAnimationFrame(animate);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    platforms.forEach((platform) => platform.draw());
+    
     player.update();
+
     if (keys.rightKey.pressed && player.position.x < proportionalSize(400)) {
         player.velocity.x = 5;
     } else if (keys.leftKey.pressed && player.position.x > proportionalSize(100)) {
