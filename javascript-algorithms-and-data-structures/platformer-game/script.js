@@ -93,7 +93,7 @@ const animate = () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     platforms.forEach((platform) => platform.draw());
-    
+
     player.update();
 
     if (keys.rightKey.pressed && player.position.x < proportionalSize(400)) {
@@ -150,9 +150,9 @@ const startGame = () => {
 startBtn.addEventListener('click', startGame);
 
 window.addEventListener('keydown', ({ key }) => {
-    player.movePlayer(key, 8, true);
+    movePlayer(key, 8, true);
 });
 
 window.addEventListener('keyup', ({ key }) => {
-    player.movePlayer(key, 0, false);
+    movePlayer(key, 0, false);
 });
