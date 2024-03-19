@@ -56,7 +56,9 @@ class Player {
     }
 };
 
-class Platform {};
+class Platform {
+    constructor(x, y) {}
+};
 
 const player = new Player();
 
