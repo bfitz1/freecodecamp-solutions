@@ -64,6 +64,10 @@ const getHighestDuplicates = (arr) => {
     if (highestCount >= 4) {
         updateRadioOption(1, sumOfAllDice);
     }
+    
+    if (highestCount >= 3) {
+        updateRadioOption(0, sumOfAllDice);
+    }
 };
 
 rollDiceBtn.addEventListener('click', () => {
