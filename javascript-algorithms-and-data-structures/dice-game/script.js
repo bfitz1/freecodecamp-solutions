@@ -39,6 +39,8 @@ const updateRadioOption = (optionNode, score) => {
     scoreSpans[optionNode].textContent = `, score = ${score}`;
 };
 
+const getHighestDuplicates = (arr) => {};
+
 rollDiceBtn.addEventListener('click', () => {
     if (rolls === 3) {
         alert('You have made three rolls this round. Please select a score.');
