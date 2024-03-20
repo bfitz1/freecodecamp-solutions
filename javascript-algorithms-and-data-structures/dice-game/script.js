@@ -89,7 +89,13 @@ const resetRadioOption = () => {
     });
 };
 
-const resetGame = () => {};
+const resetGame = () => {
+    diceValuesArr = [0, 0, 0, 0, 0];
+    score = 0;
+    totalScore = 0;
+    rolls = 0;
+    round = 1;
+};
 
 rollDiceBtn.addEventListener('click', () => {
     if (rolls === 3) {
