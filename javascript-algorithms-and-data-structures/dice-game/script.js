@@ -93,6 +93,8 @@ const detectFullHouse = (arr) => {
     updateRadioOption(5, 0);
 };
 
+const checkForStraights = (arr) => {};
+
 const resetRadioOption = () => {
     scoreInputs.forEach((input) => {
         input.disabled = true;
