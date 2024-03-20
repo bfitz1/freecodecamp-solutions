@@ -112,3 +112,5 @@ rulesBtn.addEventListener('click', () => {
         rulesContainer.style.display = 'none';
     }
 });
+
+keepScoreBtn.addEventListener('click', () => {});
