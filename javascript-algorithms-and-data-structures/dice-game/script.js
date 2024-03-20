@@ -33,7 +33,9 @@ const updateStats = () => {
     currentRoundText.textContent = round;
 };
 
-const updateRadioOption = (optionNode, score) => {};
+const updateRadioOption = (optionNode, score) => {
+    scoreInputs[optionNode].disabled = false;
+};
 
 rollDiceBtn.addEventListener('click', () => {
     if (rolls === 3) {
