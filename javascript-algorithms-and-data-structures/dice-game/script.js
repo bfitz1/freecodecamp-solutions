@@ -83,6 +83,8 @@ const detectFullHouse = (arr) => {
     for (let num of arr) {
         counts[num] = counts[num] ? counts[num] + 1 : 1;
     }
+
+    const hasThreeOfAKind = Object.values(counts).includes(3);
 };
 
 const resetRadioOption = () => {
