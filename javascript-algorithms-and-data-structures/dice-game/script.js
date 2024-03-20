@@ -78,6 +78,10 @@ const getHighestDuplicates = (arr) => {
     updateRadioOption(5, 0);
 };
 
+const detectFullHouse = (arr) => {
+    const counts = {};
+};
+
 const resetRadioOption = () => {
     scoreInputs.forEach((input) => {
         input.disabled = true;
