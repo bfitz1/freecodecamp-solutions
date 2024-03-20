@@ -99,6 +99,11 @@ const resetGame = () => {
     listOfAllDice.forEach((dice, index) => {
         dice.textContent = diceValuesArr[index];
     });
+
+    totalScoreText.textContent = totalScore;
+    scoreHistory.innerHTML = '';
+    currentRoundRollsText.textContent = rolls;
+    currentRoundText.textContent = round;
 };
 
 rollDiceBtn.addEventListener('click', () => {
