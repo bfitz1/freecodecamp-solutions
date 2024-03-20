@@ -130,6 +130,8 @@ keepScoreBtn.addEventListener('click', () => {
         updateStats();
         resetRadioOption();
         updateScore(selectedValue, achieved);
+
+        if (round > 6) {}
     } else {
         alert('Please select an option or roll the dice');
     }
