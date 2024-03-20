@@ -23,6 +23,7 @@ const rollDice = () => {
         const randomDice = Math.floor(Math.random() * 6) + 1;
         diceValuesArr.push(randomDice);
     }
+    listOfAllDice.forEach((dice, index) => {});
 };
 
 rulesBtn.addEventListener('click', () => {
