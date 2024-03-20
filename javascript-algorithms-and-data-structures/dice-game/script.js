@@ -80,6 +80,9 @@ const getHighestDuplicates = (arr) => {
 
 const detectFullHouse = (arr) => {
     const counts = {};
+    for (let num of arr) {
+        counts[num] = counts[num] ? counts[num] + 1 : 1;
+    }
 };
 
 const resetRadioOption = () => {
