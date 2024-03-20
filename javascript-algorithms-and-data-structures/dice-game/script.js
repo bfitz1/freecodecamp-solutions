@@ -23,8 +23,12 @@ const rollDice = () => {
         const randomDice = Math.floor(Math.random() * 6) + 1;
         diceValuesArr.push(randomDice);
     }
-    listOfAllDice.forEach((dice, index) => {});
+    listOfAllDice.forEach((dice, index) => {
+        dice.textContent = diceValuesArr[index];
+    });
 };
+
+rollDiceBtn.addEventListener('click', () => {});
 
 rulesBtn.addEventListener('click', () => {
     isModalShowing = !isModalShowing;
