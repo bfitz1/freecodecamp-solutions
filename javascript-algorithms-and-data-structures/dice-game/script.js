@@ -41,6 +41,7 @@ const updateRadioOption = (optionNode, score) => {
 
 const getHighestDuplicates = (arr) => {
     const counts = {};
+    for (let num of arr) {}
 };
 
 rollDiceBtn.addEventListener('click', () => {
