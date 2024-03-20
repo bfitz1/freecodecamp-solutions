@@ -73,7 +73,10 @@ const getHighestDuplicates = (arr) => {
 };
 
 const resetRadioOption = () => {
-    scoreInputs.forEach((input) => {});
+    scoreInputs.forEach((input) => {
+        input.disabled = true;
+        input.checked = false;
+    });
 };
 
 rollDiceBtn.addEventListener('click', () => {
