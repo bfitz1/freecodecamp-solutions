@@ -86,6 +86,10 @@ const detectFullHouse = (arr) => {
 
     const hasThreeOfAKind = Object.values(counts).includes(3);
     const hasPair = Object.values(counts).includes(2);
+
+    if (hasThreeOfAKind && hasPair) {
+        updateRadioOption(2, 25);
+    }
 };
 
 const resetRadioOption = () => {
