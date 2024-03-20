@@ -95,6 +95,8 @@ const resetGame = () => {
     totalScore = 0;
     rolls = 0;
     round = 1;
+
+    listOfAllDice.forEach((dice, index) => {});
 };
 
 rollDiceBtn.addEventListener('click', () => {
