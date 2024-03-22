@@ -19,6 +19,8 @@ const fetchMoreAuthors = () => {
     startingIndex += 8;
     endingIndex += 8;
     displayAuthors(authorDataArr.slice(startingIndex, endingIndex));
+
+    if (authorDataArr.length <= endingIndex) {}
 };
 
 const displayAuthors = (authors) => {
