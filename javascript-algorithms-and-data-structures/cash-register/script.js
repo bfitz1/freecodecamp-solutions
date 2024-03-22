@@ -16,6 +16,8 @@ let cid = [
 const change_due = document.getElementById('change-due');
 const cash_input = document.getElementById('cash');
 const purchase_btn = document.getElementById('purchase-btn');
+const price_p = document.getElementById('price');
+const drawer_div = document.getElementById('drawer');
 
 // The choice of floating-point values is a bit unfortunate.
 const denominations = {
@@ -48,6 +50,13 @@ const calculate_change = (cash) => cid.reduceRight(([remaining, drawer, changeli
     }
 }, [cash, [], []]);
 
+document.addEventListener('DOMContentLoaded', () => {
+    price_p.textContent = `Total: $${price.toFixed(2)}`;
+    drawer_div.innerHTML = cid.map(([name, amount]) => {
+        return `<p class="denom">${name}: $${amount}</p>`;
+    }).join('');
+});
+
 purchase_btn.addEventListener('click', () => {
     const cash = parseFloat(cash_input.value);
 
@@ -55,7 +64,7 @@ purchase_btn.addEventListener('click', () => {
         alert('Customer does not have enough money to purchase the item');
         return;
     } else if (cash === price) {
-        change_due.innerHTML = '<p>No change due - customer paid with exact cash</p>';
+        change_due.innerHTML = '<p class="status">No change due - customer paid with exact cash</p>';
         return;
     }
 
@@ -63,17 +72,25 @@ purchase_btn.addEventListener('click', () => {
     const funds = drawer.reduce((acc, [name, amount]) => acc + amount, 0);
 
     if (remaining > 0) {
-        change_due.innerHTML = '<p>Status: INSUFFICIENT_FUNDS</p>';
+        change_due.innerHTML = '<p class="status">Status: INSUFFICIENT_FUNDS</p>';
     } else if (remaining === 0 && funds === 0) {
-        change_due.innerHTML = '<p>Status: CLOSED</p>'
+        change_due.innerHTML = '<p class="status">Status: CLOSED</p>'
         change_due.innerHTML += change.map(([name, amount]) => {
-            return `<p>${name}: $${amount}</p>`
+            return `<p class="change">${name}: $${amount}</p>`
         }).join('');
+        drawer_div.innerHTML = drawer.map(([name, amount]) => {
+            return `<p class="denom">${name}: $${amount}</p>`;
+        }).join('');
+        cid = drawer;
     } else if (remaining === 0 && funds > 0) {
-        change_due.innerHTML = '<p>Status: OPEN</p>'
+        change_due.innerHTML = '<p class="status">Status: OPEN</p>'
         change_due.innerHTML += change.map(([name, amount]) => {
-            return `<p>${name}: $${amount}</p>`
+            return `<p class="change">${name}: $${amount}</p>`
         }).join('');
+        drawer_div.innerHTML = drawer.map(([name, amount]) => {
+            return `<p class="denom">${name}: $${amount}</p>`;
+        }).join('');
+        cid = drawer;
     } else {
         console.error(`Something weird happened: Remaining: ${remaining}, funds: ${funds}`);
     }
