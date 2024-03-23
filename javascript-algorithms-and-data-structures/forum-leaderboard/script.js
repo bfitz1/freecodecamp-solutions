@@ -10,6 +10,7 @@ const timeAgo = (time) => {
     const lastPost = new Date(time);
     const timeDifference = currentTime - lastPost;
     const msPerMinute = 1000 * 60;
+    const minutesAgo = Math.floor(timeDifference / msPerMinute);
 };
 
 const fetchData = async () => {
