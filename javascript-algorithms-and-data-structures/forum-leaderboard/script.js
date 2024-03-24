@@ -52,6 +52,8 @@ const forumCategory = (id) => {
         selectedCategory.className = 'general';
         selectedCategory.category = 'General'
     }
+
+    const url = `${forumCategoryUrl}${selectedCategory.className}/${id}`;
 };
 
 const timeAgo = (time) => {
