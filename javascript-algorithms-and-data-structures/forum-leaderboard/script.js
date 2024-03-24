@@ -21,6 +21,8 @@ const timeAgo = (time) => {
     if (hoursAgo < 24) {
         return `${hoursAgo}h ago`;
     }
+
+    return `${daysAgo}d ago`;
 };
 
 const fetchData = async () => {
