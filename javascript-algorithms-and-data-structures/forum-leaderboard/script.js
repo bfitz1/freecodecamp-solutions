@@ -25,7 +25,9 @@ const timeAgo = (time) => {
     return `${daysAgo}d ago`;
 };
 
-const viewCount = (views) => {};
+const viewCount = (views) => {
+    const thousands = Math.floor(views / 1000);
+};
 
 const fetchData = async () => {
     try {
