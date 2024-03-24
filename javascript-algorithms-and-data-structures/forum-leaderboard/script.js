@@ -27,6 +27,10 @@ const timeAgo = (time) => {
 
 const viewCount = (views) => {
     const thousands = Math.floor(views / 1000);
+
+    if (views >= 1000) {
+        return `${thousands}k`;
+    }
 };
 
 const fetchData = async () => {
