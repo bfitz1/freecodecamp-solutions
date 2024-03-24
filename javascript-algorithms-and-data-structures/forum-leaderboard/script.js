@@ -43,7 +43,9 @@ const allCategories = {
 const forumCategory = (id) => {
     let selectedCategory = {};
 
-    if (allCategories.hasOwnProperty(id)) {}
+    if (allCategories.hasOwnProperty(id)) {
+        const {className, category} = allCategories[id];
+    }
 };
 
 const timeAgo = (time) => {
