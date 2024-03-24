@@ -31,6 +31,8 @@ const viewCount = (views) => {
     if (views >= 1000) {
         return `${thousands}k`;
     }
+
+    return views;
 };
 
 const fetchData = async () => {
