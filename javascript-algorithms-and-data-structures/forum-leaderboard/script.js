@@ -47,7 +47,11 @@ const forumCategory = (id) => {
         const {className, category} = allCategories[id];
         selectedCategory.className = className;
         selectedCategory.category = category;
-    } else {}
+    } else {
+        selectedCategory.id = 1;
+        selectedCategory.className = 'general';
+        selectedCategory.category = 'General'
+    }
 };
 
 const timeAgo = (time) => {
