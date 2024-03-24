@@ -17,6 +17,10 @@ const timeAgo = (time) => {
     if (minutesAgo < 60) {
         return `${minutesAgo}m ago`;
     }
+
+    if (hoursAgo < 24) {
+        return `${hoursAgo}h ago`;
+    }
 };
 
 const fetchData = async () => {
