@@ -25,6 +25,8 @@ const timeAgo = (time) => {
     return `${daysAgo}d ago`;
 };
 
+const viewCount = (views) => {};
+
 const fetchData = async () => {
     try {
         const res = await fetch(forumLatest);
