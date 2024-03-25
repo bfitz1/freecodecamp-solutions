@@ -1,7 +1,8 @@
 text = 'Hello Zaira'
-shift = 3
+custom_key = 'python'
 
 def vigenere(message, key):
+    key_index = 0
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
     encrypted_text = ''
 
