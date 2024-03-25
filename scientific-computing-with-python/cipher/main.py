@@ -1,2 +1,2 @@
 text = 'Hello World'
-print(len(text))
+print(type(text))
