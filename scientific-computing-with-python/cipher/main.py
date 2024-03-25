@@ -1,4 +1,4 @@
-text = 'Hello Zaira'
+text = 'Hello Zaira!'
 custom_key = 'python'
 
 def vigenere(message, key, direction=1):
