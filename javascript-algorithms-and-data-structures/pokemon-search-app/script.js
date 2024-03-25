@@ -25,18 +25,30 @@ const clearFields = () => {
     for (let key of Object.keys(pokemonDOM)) {
         pokemonDOM[key].innerHTML = '';
     }
+
+    const sprite = document.getElementById('sprite');
+    if (sprite) {
+        sprite.remove();
+    }
 };
 
+// This is a little clumsy. I'm sure I can clean this up some.
 const populateFields = (data) => {
     const {name, id, weight, height, sprites, stats, types} = data;
     const [hp, attack, defense, specialAttack, specialDefense, speed] = stats;
 
     // Is this easier than just setting all the fields manually? Not sure.
     const obj = {
-        name, hp, attack, defense, specialAttack, specialDefense, speed
+        hp, attack, defense, specialAttack, specialDefense, speed
     };
 
+    const img = document.createElement('img');
+    img.id = 'sprite';
+    img.src = sprites.front_default;
+    pokemonDOM.id.after(img);
+
     // Handle id, weight and height separately for now
+    pokemonDOM.name.textContent = name.toUpperCase();
     pokemonDOM.id.textContent = `#${id}`;
     pokemonDOM.weight.textContent = `Weight: ${weight}`;
     pokemonDOM.height.textContent = `Height: ${height}`;
@@ -47,7 +59,8 @@ const populateFields = (data) => {
 
     for (let t of types) {
         const el = document.createElement('span');
-        el.textContent = t.type.name;
+        el.classList.add('type');
+        el.textContent = t.type.name.toUpperCase();
         pokemonDOM.types.appendChild(el);
     }
 };
@@ -60,6 +73,7 @@ searchButton.addEventListener('click', async () => {
         .then((res) => res.json())
         .then((data) => {
             console.log(data);
+            clearFields();
             populateFields(data);
         })
         .catch((err) => alert('Pokémon not found'));
