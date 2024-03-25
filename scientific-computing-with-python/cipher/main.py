@@ -4,4 +4,4 @@ alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
 for char in text:
     index = alphabet.find(char)
-    print(char)
+    print(char, index)
