@@ -1,7 +1,7 @@
 text = 'Hello Zaira'
 custom_key = 'python'
 
-def vigenere(message, key, direction):
+def vigenere(message, key, direction=1):
     key_index = 0
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
     final_message = ''
