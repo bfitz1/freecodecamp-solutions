@@ -7,3 +7,4 @@ for char in text.lower():
     print(char, index)
     new_index = index + shift
     new_char = alphabet[new_index]
+    print(new_char)
