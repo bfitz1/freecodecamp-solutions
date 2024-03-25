@@ -23,3 +23,4 @@ def vigenere(message, key):
     return encrypted_text
 
 encryption = vigenere(text, custom_key)
+print(encryption)
