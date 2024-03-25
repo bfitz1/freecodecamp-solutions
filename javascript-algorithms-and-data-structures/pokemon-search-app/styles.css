@@ -1,0 +1,180 @@
+:root {
+    /* UI colors */
+    --bg: #111111;
+    --fg1: #ffffff;
+    --fg2: #aaaaaa;
+    --accent: #0099ff;
+
+    /* Type background colors */
+    --nor: #aaaa99;
+    --fir: #ff4422;
+    --wat: #3399ff;
+    --ele: #ffcc33;
+    --gra: #77cc55;
+    --ice: #66ccff;
+    --fig: #bb5544;
+    --poi: #aa5599;
+    --gro: #ddbb55;
+    --fly: #8899ff;
+    --psy: #ff5599;
+    --bug: #aabb22;
+    --roc: #bbaa66;
+    --gho: #6666bb;
+    --dra: #7766ee;
+    --dar: #775544;
+    --ste: #aaaabb;
+    --fai: #ee99ee;
+}
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Calibri', Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100vw;
+    color: var(--fg1);
+    background-color: var(--bg);
+}
+
+h2 {
+    margin-top: 2rem;
+}
+
+#pokemon-id {
+    color: var(--fg2);
+}
+
+input, button {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+input {
+    color: var(--fg1);
+    background-color: var(--bg);
+    border-width: 0px;
+    border-bottom: 3px solid var(--accent);
+}
+
+button {
+    display: inline-block;
+    margin-left: 0.25rem;
+    border-width: 0;
+    border-radius: 5px;
+    color: var(--fg1);
+    font-weight: bold;
+    background-color: var(--accent);
+    text-transform: uppercase;
+}
+
+.hide {
+    display: none;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.75rem;
+}
+
+td:first-child {
+    font-weight: bold;
+    text-align: right;
+}
+
+.type {
+    display: inline-block;
+    padding: 0.25rem;
+    color: var(--fg1);
+    border-radius: 5px;
+    border: 1.5px solid rgba(0, 0, 0, 0.25);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0.020rem;
+    margin-right: 0.25rem;
+    width: 60px;
+    text-align: center;
+}
+
+.type.normal {
+    background-color: var(--nor);
+}
+
+.type.fire {
+    background-color: var(--fir);
+}
+
+.type.water {
+    background-color: var(--wat);
+}
+
+.type.electric {
+    background-color: var(--ele);
+}
+
+.type.grass {
+    background-color: var(--gra);
+}
+
+.type.ice {
+    background-color: var(--ice);
+}
+
+.type.fighting {
+    background-color: var(--fig);
+}
+
+.type.poison {
+    background-color: var(--poi);
+}
+
+.type.ground {
+    background-color: var(--gro);
+}
+
+.type.flying {
+    background-color: var(--fly);
+}
+
+.type.psychic {
+    background-color: var(--psy);
+}
+
+.type.bug {
+    background-color: var(--bug);
+}
+
+.type.rock {
+    background-color: var(--roc);
+}
+
+.type.ghost {
+    background-color: var(--gho);
+}
+
+.type.dragon {
+    background-color: var(--dra);
+}
+
+.type.dark {
+    background-color: var(--dar);
+}
+
+.type.steel {
+    background-color: var(--ste);
+}
+
+.type.fairy {
+    background-color: var(--fai);
+}

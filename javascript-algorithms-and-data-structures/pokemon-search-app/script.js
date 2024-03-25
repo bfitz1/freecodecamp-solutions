@@ -1,7 +1,5 @@
-// Endpoint to list all Pokémon.
+// Endpoints for Pokémon API.
 const allPokemonURL = 'https://pokeapi-proxy.freecodecamp.rocks/api/pokemon';
-
-// Endpoint template for a specific Pokémon.
 const pokemonURL = 'https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/{name-or-id}';
 
 // DOM elements.
@@ -30,39 +28,51 @@ const clearFields = () => {
     if (sprite) {
         sprite.remove();
     }
+
+    document.getElementById('stats').classList.add('hide');
 };
 
-// This is a little clumsy. I'm sure I can clean this up some.
 const populateFields = (data) => {
-    const {name, id, weight, height, sprites, stats, types} = data;
-    const [hp, attack, defense, specialAttack, specialDefense, speed] = stats;
+    // Flatten the data for easier processing.
+    const {name, id, weight, height} = data;
+    const spriteURL = data.sprites.front_default;
+    const stats = data.stats.reduce((acc, x) => {
+        // A less slick solution than I'd like because of camel casing.
+        let key = x.stat.name;
+        key = key == 'special-attack' ? 'specialAttack'
+            : key == 'special-defense' ? 'specialDefense'
+            : key;
+        acc[key] = x.base_stat
+        return acc;
+    }, {});
+    const types = data.types.map(x => x.type.name);
 
-    // Is this easier than just setting all the fields manually? Not sure.
-    const obj = {
-        hp, attack, defense, specialAttack, specialDefense, speed
-    };
-
-    const img = document.createElement('img');
-    img.id = 'sprite';
-    img.src = sprites.front_default;
-    pokemonDOM.id.after(img);
-
-    // Handle id, weight and height separately for now
-    pokemonDOM.name.textContent = name.toUpperCase();
-    pokemonDOM.id.textContent = `#${id}`;
-    pokemonDOM.weight.textContent = `Weight: ${weight}`;
-    pokemonDOM.height.textContent = `Height: ${height}`;
+    const obj = Object.assign({
+        name: name.toUpperCase(), 
+        id: `#${id}`, 
+        weight, 
+        height,
+    }, stats);
 
     for (let [key, value] of Object.entries(obj)) {
-        pokemonDOM[key].textContent = value.base_stat;
+        pokemonDOM[key].textContent = value
     }
 
+    // Types need to be displayed within new element.
     for (let t of types) {
         const el = document.createElement('span');
-        el.classList.add('type');
-        el.textContent = t.type.name.toUpperCase();
+        el.classList.add('type', t);
+        el.textContent = t.toUpperCase();
         pokemonDOM.types.appendChild(el);
     }
+
+    // Sprites also need a new element.
+    const img = document.createElement('img');
+    img.id = 'sprite';
+    img.src = spriteURL;
+    document.getElementById('name').after(img);
+
+    document.getElementById('stats').classList.remove('hide');
 };
 
 searchButton.addEventListener('click', async () => {
@@ -72,7 +82,6 @@ searchButton.addEventListener('click', async () => {
     fetch(pokemonURL.replace(/{name-or-id}/, value))
         .then((res) => res.json())
         .then((data) => {
-            console.log(data);
             clearFields();
             populateFields(data);
         })
