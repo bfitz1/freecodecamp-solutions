@@ -1,5 +1,5 @@
 text = 'Hello World'
-text[0] = 'z'
+text = 'Albatross'
 shift = 3
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
