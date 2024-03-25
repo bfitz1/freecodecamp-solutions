@@ -1,7 +1,7 @@
 text = 'Hello Zaira'
 shift = 3
 
-def caesar():
+def caesar(message, offset):
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
     encrypted_text = ''
 
