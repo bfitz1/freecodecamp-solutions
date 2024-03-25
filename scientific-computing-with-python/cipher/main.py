@@ -22,5 +22,5 @@ def vigenere(message, key, direction):
         
     return encrypted_text
 
-#encryption = vigenere(text, custom_key)
-#print(encryption)
+encryption = vigenere(text, custom_key, 1)
+print(encryption)
