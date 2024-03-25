@@ -11,4 +11,4 @@ for char in text.lower():
         new_index = (index + shift) % len(alphabet)
         encrypted_text += alphabet[new_index]
     
-    print('char:', char, 'encrypted text:', encrypted_text)
+print('encrypted text:', encrypted_text)
