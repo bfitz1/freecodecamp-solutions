@@ -1,7 +1,7 @@
 text = 'Hello Zaira'
 shift = 3
 
-def caesar(message, offset):
+def vigenere(message, key):
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
     encrypted_text = ''
 
