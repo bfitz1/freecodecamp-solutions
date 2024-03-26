@@ -13,3 +13,6 @@ def filter_expenses_by_category(expenses, category):
 
 def main():
     expenses = []
+
+    while True:
+        print('\nExpense Tracker')
