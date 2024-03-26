@@ -4,6 +4,7 @@ def convert_to_snake_case(pascal_or_camel_cased_string):
         else char
         for char in pascal_or_camel_cased_string
     ]
+    return ''.join(snake_cased_char_list).strip('_')
     #snake_cased_char_list = []
     #for char in pascal_or_camel_cased_string:
     #    if char.isupper():
