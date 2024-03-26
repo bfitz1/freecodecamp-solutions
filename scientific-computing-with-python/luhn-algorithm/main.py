@@ -23,6 +23,9 @@ def main():
     card_translation = str.maketrans({'-': '', ' ': ''})
     translated_card_number = card_number.translate(card_translation)
 
-    verify_card_number(translated_card_number)
+    if verify_card_number(translated_card_number):
+        print('VALID!')
+    else:
+        print('INVALID!')
 
 main()
