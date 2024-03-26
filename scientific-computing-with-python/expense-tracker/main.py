@@ -8,6 +8,4 @@ def print_expenses(expenses):
 def total_expenses(expenses):
     pass
 
-test = lambda x: x * 2
-print(sum(map(test, [2, 3, 5, 8])))
 expenses = []
