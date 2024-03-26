@@ -31,3 +31,5 @@ def main():
         elif choice == '2':
             print('\nAll Expenses:')
             print_expenses(expenses)
+        elif choice == '3':
+            print('\nTotal Expenses: ', total_expenses(expenses))
