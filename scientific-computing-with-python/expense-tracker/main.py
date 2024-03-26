@@ -18,3 +18,6 @@ def main():
         print('\nExpense Tracker')
         print('1. Add an expense')
         print('2. List all expenses')
+        print('3. Show total expenses')
+        print('4. Filter expenses by category')
+        print('5. Exit')
