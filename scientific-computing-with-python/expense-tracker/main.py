@@ -6,6 +6,6 @@ def print_expenses(expenses):
         print(f"Amount: {expense['amount']}, Category: {expense['category']}")
 
 def total_expenses(expenses):
-    map(lambda expense: expense['amount'], expenses)
+    return sum(map(lambda expense: expense['amount'], expenses))
 
 expenses = []
