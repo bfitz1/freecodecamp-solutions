@@ -10,6 +10,8 @@ def verify_card_number(card_number):
     even_digits = card_number_reversed[1::2]
     for digit in even_digits:
         number = int(digit) * 2
+        if number >= 10:
+            print(number)
 
 def main():
     card_number = '4111-1111-4555-1142'
