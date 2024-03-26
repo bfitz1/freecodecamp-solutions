@@ -30,3 +30,4 @@ def main():
             add_expense(expenses, amount, category)
         elif choice == '2':
             print('\nAll Expenses:')
+            print_expenses(expenses)
