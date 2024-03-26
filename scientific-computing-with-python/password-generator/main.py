@@ -1,4 +1,5 @@
 import string
+import random
 
 # Define the possible characters for the password
 letters = string.ascii_letters
