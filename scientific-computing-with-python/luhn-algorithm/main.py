@@ -3,8 +3,9 @@ def verify_card_number(card_number):
     card_number_reversed = card_number[::-1]
     odd_digits = card_number_reversed[1::2]
 
-    for d in odd_digits:
-        print(d)
+    for digit in odd_digits:
+        print(digit)
+        sum_of_odd_digits += digit
 
 def main():
     card_number = '4111-1111-4555-1142'
