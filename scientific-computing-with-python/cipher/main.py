@@ -8,7 +8,7 @@ def vigenere(message, key, direction=1):
 
     for char in message.lower():
         # Append space to the message
-        if char == ' ':
+        if char.isalpha():
             final_message += char
         else:
             # Find the right key character to encode/decode
