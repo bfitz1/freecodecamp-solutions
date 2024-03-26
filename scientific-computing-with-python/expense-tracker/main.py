@@ -3,6 +3,6 @@ def add_expense(expenses, amount, category):
 
 def print_expenses(expenses):
     for expense in expenses:
-        pass
+        print(f'Amount: {expense}, Category: {expense}')
 
 expenses = []
