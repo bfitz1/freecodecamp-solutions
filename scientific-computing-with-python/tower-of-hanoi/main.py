@@ -9,6 +9,7 @@ def move(n, source, auxiliary, target):
         rods[target].append(rods[source].pop())
         # display our progress
         print(rods, '\n')
+        move(n - 1, auxiliary, source, target)
 
 # initiate call from source A to target C with auxiliary B
 move(NUMBER_OF_DISKS, 'A', 'B', 'C')
