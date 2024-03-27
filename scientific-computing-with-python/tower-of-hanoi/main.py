@@ -5,8 +5,9 @@ def move(n, source, auxiliary, target):
     if n > 0:
         # move n - 1 disks from source to auxiliary, so they are out of the way
         move(n - 1, source, auxiliary, target)
-        # display starting configuration
+        # move the nth disk from source to target
         rods[target].append(rods[source].pop())
+        # display starting configuration
         print(rods, '\n')
 
 # initiate call from source A to target C with auxiliary B
