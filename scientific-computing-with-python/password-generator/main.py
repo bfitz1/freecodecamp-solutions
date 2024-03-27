@@ -20,7 +20,7 @@ def generate_password(length, nums, special_chars, uppercase, lowercase):
             (nums, r'\d'),
             (lowercase, r'[a-z]'),
             (uppercase, r'[A-Z]'),
-            (special_chars, r'\W'),
+            (special_chars, rf'[{symbols}]'),
         ]
     
     return password
