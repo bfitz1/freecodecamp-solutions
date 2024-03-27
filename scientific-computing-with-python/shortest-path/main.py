@@ -5,7 +5,7 @@ my_graph = {
     'D': [('A', 1), ('C', 7)],
 }
 
-def shortest_path(graph, start):
+def shortest_path(graph, start, target=''):
     unvisited = list(graph)
     distances = {key: 0 if key == start else float('inf') for key in graph}
     paths = {key: [] for key in graph}
