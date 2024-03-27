@@ -34,4 +34,4 @@ def shortest_path(graph, start, target=''):
     
     return distances, paths
 
-shortest_path(my_graph, 'A')
+shortest_path(my_graph, 'A', 'F')
