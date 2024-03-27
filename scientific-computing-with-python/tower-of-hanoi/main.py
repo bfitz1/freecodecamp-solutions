@@ -10,6 +10,7 @@ def move(n, source, auxiliary, target):
         remainder = (i + 1) % 3
         if remainder == 1:
             print(f'Move {i + 1} allowed between {source} and {target}')
+            forward = False
         elif remainder == 2:
             print(f'Move {i + 1} allowed between {source} and {auxiliary}')
         elif remainder == 0:
