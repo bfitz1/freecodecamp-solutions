@@ -23,6 +23,8 @@ def generate_password(length, nums, special_chars, uppercase, lowercase):
             (special_chars, rf'[{symbols}]'),
         ]
         # Check constraints
+        for constraint, pattern in constraints:
+            pass
     
     return password
 
