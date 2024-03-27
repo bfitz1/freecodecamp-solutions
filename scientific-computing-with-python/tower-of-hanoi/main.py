@@ -6,4 +6,5 @@ rods = {'A': list(range(NUMBER_OF_DISKS, 0, -1)), 'B': [], 'C': []}
 def move(n, source, auxiliary, target):
     print(rods)
 
+# initiate call from source A to target C with auxiliary B
 move(NUMBER_OF_DISKS, 'A', 'B', 'C')
