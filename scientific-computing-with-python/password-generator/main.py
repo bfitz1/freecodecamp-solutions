@@ -16,7 +16,11 @@ def generate_password(length, nums, special_chars, uppercase, lowercase):
         # Generate password
         for _ in range(length):
             password += secrets.choice(all_characters)
-        constraints = [(nums, '[0-9]'), (lowercase, '[a-z]')]
+        constraints = [
+            (nums, '[0-9]'),
+            (lowercase, '[a-z]'),
+            (uppercase, '[A-Z]'),
+        ]
     
     return password
 
