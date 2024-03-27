@@ -32,8 +32,8 @@ def generate_password(length, nums, special_chars, uppercase, lowercase):
     return password
 
 new_password = generate_password(
+    nums=1,
     length=8, 
-    nums=1, 
     special_chars=1, 
     uppercase=1, 
     lowercase=1
