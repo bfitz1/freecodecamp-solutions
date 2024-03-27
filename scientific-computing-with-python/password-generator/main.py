@@ -1,5 +1,6 @@
-import string
+import re
 import secrets
+import string
 
 def generate_password(length, nums, special_chars, uppercase, lowercase):
     # Define the possible characters for the password
