@@ -28,5 +28,7 @@ def shortest_path(graph, start, target=''):
         if node == start:
             continue
         print(f'\n{start}-{node} distance: {distances[node]}\nPath: {" -> ".join(paths[node])}')
+    
+    return distances, paths
 
 shortest_path(my_graph, 'A')
