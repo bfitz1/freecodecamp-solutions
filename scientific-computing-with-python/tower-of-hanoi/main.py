@@ -3,9 +3,9 @@ number_of_moves = 2 ** NUMBER_OF_DISKS - 1
 
 rods = {'A': list(range(NUMBER_OF_DISKS, 0, -1)), 'B': [], 'C': []}
 
-def make_allowed_move():
+def make_allowed_move(rod1, rod2):
     pass
-    
+
 def move(n, source, auxiliary, target):
     # display starting configuration
     print(rods)
