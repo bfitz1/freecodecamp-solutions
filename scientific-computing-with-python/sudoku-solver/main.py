@@ -65,4 +65,5 @@ class Board:
                 if self.is_valid(next_empty, guess):
                     row, col = next_empty
                     self.board[row][col] = guess
-                    self.solver()
+                    if self.solver():
+                        return True
