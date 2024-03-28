@@ -36,4 +36,4 @@ class Board:
         return None
     
     def valid_in_row(self, row, num):
-        num not in self.board[row]
+        return num not in self.board[row]
