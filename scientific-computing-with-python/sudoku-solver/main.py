@@ -40,3 +40,4 @@ class Board:
 
     def valid_in_col(self, col, num):
         for row in range(9):
+            self.board[row][col] != num
