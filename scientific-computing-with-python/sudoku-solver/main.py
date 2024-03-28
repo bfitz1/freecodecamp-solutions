@@ -62,4 +62,5 @@ class Board:
             return True
         else:
             for guess in range(1, 10):
-                self.is_valid(next_empty, guess)
+                if self.is_valid(next_empty, guess):
+                    row, col = next_empty
