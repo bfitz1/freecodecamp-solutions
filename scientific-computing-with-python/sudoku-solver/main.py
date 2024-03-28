@@ -51,4 +51,4 @@ class Board:
         return True
     
     def is_valid(self, empty, num):
-        pass
+        row, col = empty
