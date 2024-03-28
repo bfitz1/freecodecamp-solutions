@@ -3,3 +3,4 @@ class Board:
         self.board = board
 
     def __str__(self):
+        upper_lines = f'\n╔═══{"╤═══"*2}{"╦═══"}{"╤═══"*2}{"╦═══"}{"╤═══"*2}╗\n'
