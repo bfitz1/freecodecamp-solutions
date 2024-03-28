@@ -9,3 +9,4 @@ class Board:
         board_string = upper_lines
         for index, line in enumerate(self.board):
             row_list = []
+            for square_no, part in enumerate():
