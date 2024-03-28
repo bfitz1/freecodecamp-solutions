@@ -30,3 +30,4 @@ class Board:
         for row, contents in enumerate(self.board):
             try:
                 col = contents.index(0)
+                return row, col
