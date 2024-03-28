@@ -20,3 +20,5 @@ class Board:
             if index < 8:
                 if index % 3 == 2:
                     board_string += f'╠═══{"╪═══"*2}{"╬═══"}{"╪═══"*2}{"╬═══"}{"╪═══"*2}╣\n'
+                else:
+                    board_string += middle_lines
