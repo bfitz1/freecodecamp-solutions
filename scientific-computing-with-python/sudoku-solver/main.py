@@ -10,3 +10,4 @@ class Board:
         for index, line in enumerate(self.board):
             row_list = []
             for square_no, part in enumerate([line[:3], line[3:6], line[6:]], start=1):
+                '|'.join(str(item) for item in part)
