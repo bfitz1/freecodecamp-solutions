@@ -32,3 +32,4 @@ class Board:
                 col = contents.index(0)
                 return row, col
             except ValueError:
+                pass
