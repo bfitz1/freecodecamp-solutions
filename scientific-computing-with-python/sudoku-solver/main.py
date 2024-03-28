@@ -13,3 +13,4 @@ class Board:
                 row_square = '|'.join(str(item) for item in part)
                 row_list.extend(row_square)
                 if square_no != 3:
+                    row_list.append('║')
