@@ -59,3 +59,4 @@ class Board:
     
     def solver(self):
         if (next_empty := self.find_empty_cell()) is None:
+            return True
