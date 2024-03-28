@@ -75,3 +75,4 @@ def solve_sudoku(board):
     print(f'\nPuzzle to solve:\n{gameboard}')
     if gameboard.solver():
         print('\nSolved puzzle:')
+        print(gameboard)
