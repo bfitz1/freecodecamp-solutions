@@ -37,3 +37,6 @@ class Board:
     
     def valid_in_row(self, row, num):
         return num not in self.board[row]
+
+    def valid_in_col(self, col, num):
+        pass
