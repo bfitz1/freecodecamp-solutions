@@ -1,3 +1,3 @@
 class TreeNode:
-    def __init__():
+    def __init__(self, key):
         pass
