@@ -8,3 +8,4 @@ class Board:
         lower_lines = f'╚═══{"╧═══"*2}{"╩═══"}{"╧═══"*2}{"╩═══"}{"╧═══"*2}╝\n'
         board_string = upper_lines
         for index, line in enumerate(self.board):
+            row_list = []
