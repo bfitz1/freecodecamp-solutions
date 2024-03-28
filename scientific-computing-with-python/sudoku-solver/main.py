@@ -29,3 +29,4 @@ class Board:
     def find_empty_cell(self):
         for row, contents in enumerate(self.board):
             try:
+                col = contents.index(0)
