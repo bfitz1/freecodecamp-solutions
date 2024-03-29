@@ -63,3 +63,4 @@ class BinarySearchTree:
         if node is not None:
             self._inorder_traversal(node.left, result)
             result.append(node.key)
+            self._inorder_traversal(noe.right, result)
