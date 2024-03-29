@@ -55,4 +55,4 @@ class BinarySearchTree:
         return node.key
     
     def inorder_traversal(self):
-        pass
+        result = []
