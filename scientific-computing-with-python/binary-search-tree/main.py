@@ -64,3 +64,5 @@ class BinarySearchTree:
             self._inorder_traversal(node.left, result)
             result.append(node.key)
             self._inorder_traversal(noe.right, result)
+
+bst = BinarySearchTree()
