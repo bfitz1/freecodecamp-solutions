@@ -60,4 +60,5 @@ class BinarySearchTree:
         return result
     
     def _inorder_traversal(self, node, result):
-        pass
+        if node is not None:
+            self._inorder_traversal(node.left, result)
