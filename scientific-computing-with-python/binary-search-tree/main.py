@@ -50,4 +50,5 @@ class BinarySearchTree:
         return node
 
     def _min_value(self, node):
-        pass
+        while node.left is not None:
+            pass
