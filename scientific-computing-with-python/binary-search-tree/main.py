@@ -28,3 +28,4 @@ class BinarySearchTree:
             return node
         if key < node.key:
             return self._search(node.left, key)
+        return self._search(node.right, key)
