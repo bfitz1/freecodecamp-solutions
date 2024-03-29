@@ -32,3 +32,6 @@ class BinarySearchTree:
     
     def delete(self, key):
         self.root = self._delete(self.root, key)
+    
+    def _delete(self, node, key):
+        pass
