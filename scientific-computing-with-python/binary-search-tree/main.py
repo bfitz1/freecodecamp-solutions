@@ -21,4 +21,4 @@ class BinarySearchTree:
         return node
     
     def search(self, key):
-        self._search(self.root, key)
+        return self._search(self.root, key)
