@@ -51,7 +51,7 @@ def arithmetic_arranger(problems, show_answers=False):
             x = int(lhs)
             y = int(rhs)
             answer = x + y if op == '+' else x - y
-            solution_line += format_solution(answer, width) + ' ' * 4
+            solution_line += format_solution(str(answer), width) + ' ' * 4
 
     return '\n'.join([
         operand1_line.rstrip(),
@@ -60,4 +60,4 @@ def arithmetic_arranger(problems, show_answers=False):
         solution_line.rstrip(),
     ]).rstrip()
 
-print(f'\n{arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"])}')
+print(f'\n{arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"], show_answers=True)}')
