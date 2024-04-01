@@ -50,39 +50,54 @@ def create_spend_chart(categories):
     }
     total = sum(groups.values())
 
-    # Tedious text formatting: first we format the data
+    # Each category adds three columns of text. There's also an extra
+    # one tacked on the end for whatever reason.
     width = 3*len(groups) + 1
-    print('Percentage spent by category')
+
+    # Tedious text formatting: first we format the data
+    lines = []
+    lines.append('Percentage spent by category')
     for percentage in range(100, -1, -10):
-        print(f'{percentage:3}|', end='')
+        line = []
+        line.append(f'{percentage:3}|')
         for spent in groups.values():
             if round((spent / total) * 100) >= percentage:
-                print('o'.center(3), end='')
+                line.append('o'.center(3))
             else:
-                print(' '.center(3), end='')
-        print(' ')
+                line.append(' '.center(3))
+        line.append(' ')
+        lines.append(''.join(line))
 
     # More tedious text formatting: now we format the labels!
-    print('    ' + ('-' * width) + ' ') 
+    lines.append('    ' + ('-' * width)) 
     longest = len(max(groups.keys(), key=len))
     # Tricky bit: make every label the same length, then splat so the zip
     # call groups on a per character basis
     for item in zip(*[x.ljust(longest) for x in groups.keys()]):
-        print('    ', end='')
+        line = []
+        line.append('    ')
         for letter in item:
-            print(letter.center(3), end='')
-        print(' ')
+            line.append(letter.center(3))
+        line.append(' ')
+        lines.append(''.join(line))
+    
+    return '\n'.join(lines)
 
 
 if __name__ == '__main__':
-    # Example from the exercise page
+    # Mostly debugging the spacing now
     food = Category("Food")
     food.deposit(1000, "deposit")
-    food.withdraw(10.15, "groceries")
-    food.withdraw(15.89, "restaurant and more food for dessert")
+    food.withdraw(60, "groceries")
+
     clothing = Category("Clothing")
-    food.transfer(50, clothing)
+    clothing.deposit(1000, "deposit")
+    clothing.withdraw(20, "shirts")
+
+    auto = Category("Auto")
+    auto.deposit(1000, "deposit")
+    auto.withdraw(10, "scent tree")
 
     # Check the output
     print(food, '\n')
-    create_spend_chart([food, clothing])
+    print(create_spend_chart([food, clothing, auto]))
