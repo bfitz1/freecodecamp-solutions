@@ -25,7 +25,7 @@ class Rectangle:
         lines = []
         for _ in range(self.height):
             lines.append("*" * self.width)
-        return "\n".join(lines)
+        return "\n".join(lines) + "\n"
     
     def get_amount_inside(self, shape):
         return self.get_area() // shape.get_area()
