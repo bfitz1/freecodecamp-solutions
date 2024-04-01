@@ -28,7 +28,7 @@ class Rectangle:
         return "\n".join(lines)
     
     def get_amount_inside(self, shape):
-        return self.get_area // shape.get_area
+        return self.get_area() // shape.get_area()
     
     def __str__(self):
         return f"Rectangle(width={self.width}, height={self.height})"
