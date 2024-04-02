@@ -39,4 +39,25 @@ def collapse(contents):
     return result
 
 def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
-    pass
+    successes = 0
+    for _ in range(num_experiments):
+        # Always create a copy since Hat.draw mutates its internal state
+        copy = Hat(**collapse(hat.contents))
+        outcome = collapse(copy.draw(num_balls_drawn))
+        # Check that we have at least as many balls as expected
+        meets_expectations = all(
+            outcome.get(key, 0) >= expected_balls.get(key)
+            for key in expected_balls
+        )
+        successes += 1 if meets_expectations else 0
+    return successes / num_experiments
+
+if __name__ == "__main__":
+    hat = Hat(black=6, red=4, green=3)
+    probability = experiment(
+        hat=hat,
+        expected_balls={"red":2,"green":1},
+        num_balls_drawn=5,
+        num_experiments=2000
+    )
+    print(probability)
