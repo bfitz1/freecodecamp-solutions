@@ -1,6 +1,5 @@
 import copy
 import random
-from collections import Counter
 
 class Hat:
     def __init__(self, **kwargs):
